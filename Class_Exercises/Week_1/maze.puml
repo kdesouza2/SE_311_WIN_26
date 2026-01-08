@@ -1,0 +1,50 @@
+' Week 1 In Class Exercise 
+
+@startuml maze
+
+' Classes
+class MapSite {
+  +Enter()
+} 
+
+class Door {
+  -isOpen 
+  -room1 
+  -room2
+  +Enter()
+}
+
+class Room {
+  -roomNumber
+  +Enter()
+  +GetSide()
+  +SetSide()
+}
+
+class Maze {
+  -roomNumber
+  +AddRoom()
+  +RoomNo(): Room
+}
+
+class Wall {
+  +Enter()
+}
+
+class MazeGame {
+  +CreateMaze()
+  +LoadMaze()
+}
+
+' Relationships
+Door --|> MapSite 
+Room --|> MapSite
+Wall --|> MapSite
+Room o-- MapSite
+Maze *-- Room
+MazeGame ..> Maze
+MazeGame ..> Room
+MazeGame ..> Door
+MazeGame ..> Wall
+
+@enduml

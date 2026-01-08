@@ -1,0 +1,15 @@
+Designs vs. Documentation/Diagram
+    Documentations/models are merely the vehicles that capture and communicate the designer's desicisions
+
+Designer vs. Programmer
+    Architects vs. Bricklayers
+
+Five types of design decisions:
+1. Component design
+    Component: independently executable, deployable unit
+    There achitecture decisions are the mostly difficult to change
+
+2. Data design
+3. Logic design
+4. Module design
+5. Concept and naming design
