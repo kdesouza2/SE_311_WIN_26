@@ -1,4 +1,5 @@
-' Week 1 In Class Exercise 
+<!-- Week 1 In Class Exercise  -->
+```plantuml
 
 @startuml maze
 

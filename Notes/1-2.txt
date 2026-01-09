@@ -13,3 +13,10 @@ Five types of design decisions:
 3. Logic design
 4. Module design
 5. Concept and naming design
+
+OOP has 3 main parts:
+1. Inheritance
+2. Encapsulation
+3. Polymorphism 
+
+The main purpose of abstraction is to decouple elements
