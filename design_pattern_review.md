@@ -76,7 +76,7 @@ The Abstract Factory pattern provides an interface for creating families of rela
 A furniture store offering modern or Victorian furniture sets (chairs, sofas, tables).
 
 **UML Diagram:**  
-![Abstract Factory UML](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Abstract_factory_UML.svg/1200px-Abstract_factory_UML.svg.png)
+![Abstract Factory UML](https://www.oodesign.com/images/creational/abstract-factory-pattern.png)
 
 ---
 
