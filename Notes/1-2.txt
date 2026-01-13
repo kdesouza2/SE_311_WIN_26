@@ -1,3 +1,5 @@
+01.08.2026
+
 Designs vs. Documentation/Diagram
     Documentations/models are merely the vehicles that capture and communicate the designer's desicisions
 

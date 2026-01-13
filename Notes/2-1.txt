@@ -1,0 +1,46 @@
+01.13.2026
+
+No Silver Bullets:
+1. Complexity
+2. Changeability
+3. Conformity
+4. Invisibility
+
+Abstraction: the art of creation
+    Component
+    Data
+        Data Structure
+        Input/Output
+    Module
+        Functions/Classes/Modules
+    Logic
+        Procedures/Algorithms
+    Concept and Naming
+
+
+From SE 310 -- Maze Game
+    MapSite is the most important abstraction choice, because it enables polymorphism. Without MapSite, room, wall and door would be bound 
+    to a specific layout. However, since we have MapSite we can create many different layouts without touching the room, wall or door classes
+
+Modularization
+~ Module-related decisions:
+    How to split files into folders/namespaces
+    How to split methods into classes
+    How to make different modules/classes work together
+
+Key Word In Context (KWIC)
+    Input
+    Circular Shift
+    Alphabetizing
+    Output
+
+    Component
+    Data
+        Data Structure:
+            
+        Input/Output
+    Module
+        Functions/Classes/Modules
+    Logic
+        Procedures/Algorithms
+    Concept and Naming
