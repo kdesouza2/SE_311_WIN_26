@@ -6,6 +6,11 @@ No Silver Bullets:
 3. Conformity
 4. Invisibility
 
+How to judge your program:
+    1. Context
+    2. Change 
+    3. People
+
 Abstraction: the art of creation
     Component
     Data
@@ -29,6 +34,8 @@ Modularization
     How to make different modules/classes work together
 
 Key Word In Context (KWIC)
+    Line Storage
+
     Input
     Circular Shift
     Alphabetizing
@@ -37,10 +44,20 @@ Key Word In Context (KWIC)
     Component
     Data
         Data Structure:
-            
+
         Input/Output
     Module
         Functions/Classes/Modules
     Logic
         Procedures/Algorithms
     Concept and Naming
+
+Information Hiding:
+~ The principle of segregation of the design decisions in a computer program that are most likely to change, 
+    thus protecting other parts of the program from extensive 
+
+Module:
+~ An independent task assignment
+~ An independent evovable unit
+~ No matter how it is oriented
+~ Separated by interfaces
