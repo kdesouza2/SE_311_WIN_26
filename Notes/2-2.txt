@@ -1,0 +1,18 @@
+From KWIC to OO
+
+Information Hiding 
+    Hiding the decisions that are likely to change
+    Encapsulation
+        Hide changeable data structure
+
+The Definition of Module   
+    Independent task assignment
+
+Abstract data type
+    The definition of a class
+
+Inheritance
+    Create an abstract interface so that the client doesn't need to know the subclasses
+
+Polymorphism
+    Configure features at run-time
