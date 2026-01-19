@@ -22,7 +22,7 @@ class Main {
 }
 
 class CommandValidator {
-    -validCommands: List<String>
+    -VALID_COMMANDS: List<String>
     +validateCommand(): boolean
 }
 
@@ -32,6 +32,8 @@ class LineStorage {
 }
 
 class CommandProcessor {
+    #storage: LineStorage
+    #output: Output
     +CommandProcessor()
     +parseCommand()
     +processCommand()
@@ -77,14 +79,13 @@ class TxtIn {
 }
 
 interface Output {
-    +printLines(lines: List<String>)
-    +printMessage(message: String)
-
+    +printOutput(lines: List<String>)
+    +printOutput(line: String)
 }
 
 class ConsoleOut {
-    +printLines(lines: List<String>)
-    +printMessage(message: String)
+    +printOutput(lines: List<String>)
+    +printOutput(line: String)
 }
 
 interface Alphabetizer {
@@ -112,10 +113,10 @@ CommandProcessor <|-- KWICProcessor
 CommandProcessor <|-- SearchProcessor
 CommandProcessor <|-- IndexProcessor
 CommandProcessor <|-- QuitProcessor
-Input <|-- TxtIn
-Output <|-- ConsoleOut
-Alphabetizer <|-- AscendingAlphabetizer
-Alphabetizer <|-- DescendingAlphabetizer
+Input <|..TxtIn
+Output <|.. ConsoleOut
+Alphabetizer <|.. AscendingAlphabetizer
+Alphabetizer <|.. DescendingAlphabetizer
 
 KWICProcessor --> Alphabetizer
 IndexProcessor --> Alphabetizer
