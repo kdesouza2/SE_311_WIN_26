@@ -15,7 +15,7 @@ How to address changes in:
 class Main {
     -commandProcessor: CommandProcessor
     -input: Input
-    -lineCollection: LineStorage
+    -storage: LineStorage
     -commandValidator: CommandValidator
     +Main()
     +start()

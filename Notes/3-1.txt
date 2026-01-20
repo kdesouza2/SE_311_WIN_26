@@ -1,0 +1,14 @@
+Why do we need to model?
+1. Analyze
+    Changeability
+    Performance
+    Security
+    Availability
+    Reliability
+
+2. Software is invisible
+    Different analysis requires different models
+    3 categories:
+        Module (static, compile-time)
+        Component-connector (dynamic, runtime)
+        Allocation (hardware, team)
