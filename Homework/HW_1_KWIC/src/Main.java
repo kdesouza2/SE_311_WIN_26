@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -9,13 +11,26 @@ public class Main {
 
         String filename = args[0];
         Input input = new TxtIn(filename);
-        Output output = new ConsoleOut();
+
         LineStorage storage = new LineStorage();
 
         // store original lines
         storage.setLines(input.readLines());
+
+        CommandValidator commandValidator = new CommandValidator();
         
-        
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.print("> ");
+            String command = scanner.nextLine();
+
+            if (commandValidator.validateCommand(command)) {
+                
+            }
+
+        }
+
     }
 
 }

@@ -107,7 +107,6 @@ class DescendingAlphabetizer {
 Main o-- CommandProcessor
 Main o-- CommandValidator
 Main o-- Input
-Main o-- LineStorage
 
 CommandProcessor <|-- KWICProcessor
 CommandProcessor <|-- SearchProcessor
@@ -120,7 +119,6 @@ Alphabetizer <|.. DescendingAlphabetizer
 
 KWICProcessor --> Alphabetizer
 IndexProcessor --> Alphabetizer
-Input --> LineStorage
 CommandProcessor --> LineStorage
 CommandProcessor --> Output
 

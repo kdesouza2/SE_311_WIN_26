@@ -1,14 +1,43 @@
 Why do we need to model?
 1. Analyze
-    Changeability
-    Performance
-    Security
-    Availability
-    Reliability
+    ~Changeability
+    ~Performance
+    ~Security
+    ~Availability
+    ~Reliability
 
 2. Software is invisible
-    Different analysis requires different models
-    3 categories:
-        Module (static, compile-time)
-        Component-connector (dynamic, runtime)
-        Allocation (hardware, team)
+    ~Different analysis requires different models
+    ~3 categories:
+        ~Module (static, compile-time)
+        ~Component-connector (dynamic, runtime)
+        ~Allocation (hardware, team)
+
+UML Diagram Family
+1. Structural
+2. Behavioral
+3. 
+
+4+1 View
+1. Use Case View --> Use Case, User Scenarios
+    ~The center/determines the other views
+    ~This view represents the scenarios that tie the four views together and form the reason why all the other views exists
+    ~This view seems reducdant (hence +1). However, it represents the architecturally significant requirements (ASR) in the form of scenarios
+
+    User Scenarios
+        ~Light-weighted use case specification
+        ~Starting point of implementation
+        ~Maps to features
+        ~Form a separate type of issue tickets
+        ~Can be used to track productivity and quality
+            ~Separate ticket types
+            ~Link commits to ticket numbers
+            ~Can be used to assign tasks
+        ~The starting point of data-driven project management
+
+        What makes a good user scenario?
+            ~Always starts with a subject, matching one of the actors in the user case diagram 
+            ~Active tense
+            ~Specify concrete actions
+            ~Specify the what not the how
+2. The Process View
