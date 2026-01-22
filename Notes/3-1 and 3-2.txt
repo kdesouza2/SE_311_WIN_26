@@ -15,8 +15,11 @@ Why do we need to model?
 
 UML Diagram Family
 1. Structural
+    Class, component, deployment
 2. Behavioral
-3. 
+    State machine, Use case
+3. Interaction
+    Sequence
 
 4+1 View
 1. Use Case View --> Use Case, User Scenarios
@@ -41,3 +44,11 @@ UML Diagram Family
             ~Specify concrete actions
             ~Specify the what not the how
 2. The Process View
+
+Component View
+    A component is an independently installable, and executable unit
+    A component represents a modular part of a system
+    2 approaches:
+        1. Black box approach hides the component's internal structure
+        2. White box approach shows the component's internal structure
+
