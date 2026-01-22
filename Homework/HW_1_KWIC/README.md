@@ -7,27 +7,27 @@ Navigate to HW_1_KWIC folder, open terminal and run java -cp out src/Main.java i
 This program accepts 4 commands: "kwic", "index", "search [keyword]", "quit" <br>
 This program is case-sensitive so leave all commands and keywords in lowercase 
 
-**kwic**
+**kwic** <br>
 Given an input file containing multiple sentences, the system shall: <br>
 ● Generate all circular shifts of each sentence. <br>
 ● Output all circularly shifted sentences in alphabetical order. <br>
 ● Append the original line number to each shifted line. 
 
-**index**
+**index** <br>
 Given the list of input sentences, the system shall generate a keyword index with the following properties: <br>
 ● All keywords are listed in alphabetical order. <br>
 ● Each keyword is followed by the line number(s) of the original sentence(s) in which it appears. <br>
 ● If a keyword appears in multiple lines, all corresponding line numbers must be listed. 
 
-**search [keyword]**
+**search [keyword]** <br>
 The system shall support interactive keyword search: <br>
 ● The user enters a keyword via the console.<br>
 ● The system returns all original sentences containing the keyword.<br>
 ● In each returned sentence, the keyword must be highlighted.<br>
 ● The system also reports the total number of lines containing the keyword
 
-**quit**
-Quits the program instantly<br>
+**quit** <br>
+Quits the program instantly
 
 ### Files and Their Purpose
 **Alphabetizer.java** <br>
