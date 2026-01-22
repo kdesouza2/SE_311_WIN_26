@@ -8,72 +8,71 @@ This program accepts 4 commands: "kwic", "index", "search [keyword]", "quit" <br
 This program is case-sensitive so leave all commands and keywords in lowercase 
 
 **kwic**
-Given an input file containing multiple sentences, the system shall:
-● Generate all circular shifts of each sentence.
-● Output all circularly shifted sentences in alphabetical order.
-● Append the original line number to each shifted line.
+Given an input file containing multiple sentences, the system shall: <br>
+● Generate all circular shifts of each sentence. <br>
+● Output all circularly shifted sentences in alphabetical order. <br>
+● Append the original line number to each shifted line. 
 
 **index**
-Given the list of input sentences, the system shall generate a keyword index with the following
-properties:
-● All keywords are listed in alphabetical order.
-● Each keyword is followed by the line number(s) of the original sentence(s) in which it appears.
-● If a keyword appears in multiple lines, all corresponding line numbers must be listed.
+Given the list of input sentences, the system shall generate a keyword index with the following properties: <br>
+● All keywords are listed in alphabetical order. <br>
+● Each keyword is followed by the line number(s) of the original sentence(s) in which it appears. <br>
+● If a keyword appears in multiple lines, all corresponding line numbers must be listed. 
 
 **search [keyword]**
-The system shall support interactive keyword search:
-● The user enters a keyword via the console.
-● The system returns all original sentences containing the keyword.
-● In each returned sentence, the keyword must be highlighted.
+The system shall support interactive keyword search: <br>
+● The user enters a keyword via the console.<br>
+● The system returns all original sentences containing the keyword.<br>
+● In each returned sentence, the keyword must be highlighted.<br>
 ● The system also reports the total number of lines containing the keyword
 
 **quit**
-Quits the program instantly
+Quits the program instantly<br>
 
-### Files and their Purpose
-**Alphabetizer.java**
+### Files and Their Purpose
+**Alphabetizer.java** <br>
 Interface to give the blueprint for future alphabetizer (ascending, descending, etc.)
 
-**AscendingAlphabetizer.java**
+**AscendingAlphabetizer.java** <br>
 Implements Alphabetizer.java to sort sentences in ascending order
 
-**CommandProcessor.java**
+**CommandProcessor.java** <br>
 Hub to delegate specific command processor based off given command
 
-**CommandValidator.java**
+**CommandValidator.java** <br>
 Validates incoming command
 
-**ConsoleOut.java**
+**ConsoleOut.java** <br>
 Implements Output.java and handles STDOUT
 
-**DescendingAlphabetizer.java**
+**DescendingAlphabetizer.java** <br>
 Implements Alphabetizer.java to sort sentences in descending order
 
-**IndexProcessor.java**
+**IndexProcessor.java** <br>
 Handles index command functionality
 
-**Input.java**
+**Input.java** <br>
 Interface to give the blueprint for future input types (.txt, .csv etc.)
 
-**KWICProcessor.java**
+**KWICProcessor.java** <br>
 Handles kwic command functionality
 
-**LineStorage.java**
+**LineStorage.java** <br>
 Handles storing multiple sentences for easy reference
 
-**Main.java**
+**Main.java** <br>
 Master Control
 
-**Output.java**
+**Output.java** <br>
 Interface to give the blueprint for future output types (STDOUT, .txt etc.)
 
-**QuitProcessor.java**
+**QuitProcessor.java** <br>
 Handles quit command functionality
 
-**SearchProcessor.java**
+**SearchProcessor.java** <br>
 Handles search command functionality
 
-**TxtIn.java**
+**TxtIn.java** <br>
 Implements Input.java and handles reading from a .txt file
 
 
