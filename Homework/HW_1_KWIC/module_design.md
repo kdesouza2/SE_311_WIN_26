@@ -1,11 +1,7 @@
-<!-- Note to Self: Strategy Pattern should be used (input/output for instance)
-Only represent the major decisions: major classes, data structures, relationship, abstraction, encapsulation, etc
-DON'T need return types, all getters and setters, types of parameters, etc. -->
-
 How to address changes in:
-○ Major classes --> **Add concrete class**
-○ Key attributes and methods
-○ Relationships among modules
+○ Major classes --> I tried my best to abstract where I can so you'll just need to create another concrete class
+○ Key attributes and methods --> Refactor my code to adapt to the change
+○ Relationships among modules --> Refactor my code to adapt to the change
 
 
 ```plantuml
@@ -23,7 +19,7 @@ class Main {
 
 class CommandValidator {
     -VALID_COMMANDS: List<String>
-    +validateCommand(): boolean
+    +validateCommand()
 }
 
 class LineStorage {
@@ -51,9 +47,7 @@ class KWICProcessor {
 class SearchProcessor {
     -keyword: String
     +SearchProcessor()
-    +findMatches(keyword, lines): List<String>
     +execute()
-    +highlight(keyword, line): String
 
 }
 
@@ -71,11 +65,11 @@ class QuitProcessor {
 }
 
 interface Input {
-    +readInput(): List<String>
+    +readInput()
 }
 
 class TxtIn {
-    +readInput(): List<String>
+    +readInput()
 }
 
 interface Output {
@@ -89,17 +83,17 @@ class ConsoleOut {
 }
 
 interface Alphabetizer {
-    +sort(lines: List<String>): List<String>
+    +sort(lines: List<String>)
  
 }
 
 class AscendingAlphabetizer {
-    +sort(lines: List<String>): List<String>
+    +sort(lines: List<String>)
 
 }
 
 class DescendingAlphabetizer {
-    +sort(lines: List<String>): List<String>
+    +sort(lines: List<String>)
 
 }
 

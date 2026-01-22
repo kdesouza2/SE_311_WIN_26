@@ -3,8 +3,6 @@ import java.util.List;
 
 public class SearchProcessor extends CommandProcessor {
     private final String command;
-    private LineStorage originalLines;
-    private Output output;
 
     public SearchProcessor(LineStorage originalLines, Output output, String command) {
         super(originalLines, output);
@@ -16,23 +14,24 @@ public class SearchProcessor extends CommandProcessor {
         String keyword = parts[1].toLowerCase();
 
         List<String> foundLines = new ArrayList<>();
-        foundLines.add("Index  |  Line with Keyword Bolded  | Original Line Index");
 
         int currNum = 1;
         for (String line : originalLines.getLines()) {
             if (line.contains(keyword)) {
-                foundLines.add(String.format("%d  |  %s  | %d", currNum, line.replace(keyword, String.format("**%s**", keyword)), originalLines.getLines().indexOf(line)));
+                foundLines.add(String.format("%d  |  %s  | %d", currNum, line.replace(keyword, String.format("**%s**", keyword)), originalLines.getLines().indexOf(line) + 1));
                 currNum++;
             }
         }
 
         if (foundLines.isEmpty()) {
-            output.printOutputLine(String.format("%s not found.", keyword));
+            output.printOutputLine(String.format("[%s] not found.", keyword));
         } else {
+            output.printOutputLine("Index  |  Line with Keyword Bolded  | Original Line Index");
             output.printOutputLine(String.format("%d sentence(s) found:", foundLines.size()));
             output.printOutput(foundLines);
         }
 
     }
+
     
 }

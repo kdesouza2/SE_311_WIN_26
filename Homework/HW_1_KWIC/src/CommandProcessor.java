@@ -15,22 +15,27 @@ public class CommandProcessor {
 		String[] parts = parseCommand(command);
 		String commandType = parts[0].toLowerCase();
 
-        if (commandType.equals("kwic")) {
-			KWICProcessor kwicProcessor = new KWICProcessor(originalLines, output);
-            kwicProcessor.execute();
-            return true;
-		} // else if (commandType.equals("search")) {
-		// 	SearchProcessor searchProcessor = new SearchProcessor(originalLines, output, command);
-        //  searchProcessor.execute();
-        //  return true;
-		// } else if (commandType.equals("index")) {
-		// 	IndexProcessor indexProcessor = new IndexProcessor(originalLines, command);
-        //  indexProcessor.execute();
-        //  return true;
-		// } else {
-		// 	QuitProcessor quitProcessor = new QuitProcessor();
-        //  quitProcessor.execute();
-        // }
+        switch (commandType) {
+            case "kwic" -> {
+                KWICProcessor kwicProcessor = new KWICProcessor(originalLines, output);
+                kwicProcessor.execute();
+                return true;
+            }
+            case "search" -> {
+                SearchProcessor searchProcessor = new SearchProcessor(originalLines, output, command);
+                searchProcessor.execute();
+                return true;
+            }
+            case "index" -> {
+                IndexProcessor indexProcessor = new IndexProcessor(originalLines, output);
+                indexProcessor.execute();
+                return true;
+            }
+            default -> {
+                QuitProcessor quitProcessor = new QuitProcessor(originalLines, output);
+                quitProcessor.execute();
+            }
+        }
 
         return false;
     }

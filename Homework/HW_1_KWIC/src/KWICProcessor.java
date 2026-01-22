@@ -2,13 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class KWICProcessor extends CommandProcessor {
-    private LineStorage originalLines;
-    private final LineStorage KWIC;
-    private Output output;
+    private final LineStorage kwic;
 
     public KWICProcessor (LineStorage originalLines, Output output) {
         super(originalLines, output);
-        this.KWIC = new LineStorage();
+        this.kwic = new LineStorage();
     }
 
     private void createKWICTable() {
@@ -25,7 +23,7 @@ public class KWICProcessor extends CommandProcessor {
             currNum++;
         }
 
-        KWIC.setLines(kwicTable);
+        kwic.setLines(kwicTable);
     }
 
     private List<String> alphabetize(List<String> lines) {
@@ -49,7 +47,7 @@ public class KWICProcessor extends CommandProcessor {
                     }
                 }
                 
-                circularLines.add(String.format("%s  |  %d", sb.toString(), originalLines.getLines().indexOf(line)));
+                circularLines.add(String.format("%s  |  %d", sb.toString(), originalLines.getLines().indexOf(line) + 1));
             }
         }
 
@@ -58,11 +56,11 @@ public class KWICProcessor extends CommandProcessor {
 
     public void execute(){
         
-        if (KWIC.isEmpty()) {
+        if (kwic.isEmpty()) {
             createKWICTable();
         }
 
-        output.printOutput(KWIC.getLines());
+        output.printOutput(kwic.getLines());
     }
     
 }

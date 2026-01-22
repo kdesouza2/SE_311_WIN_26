@@ -7,7 +7,14 @@ public class CommandValidator {
     }
 
     public boolean validateCommand(String command) {
-        return VALID_COMMANDS.contains(command);
+
+        for (String validCommand : VALID_COMMANDS) {
+            if (command.contains(validCommand)) {
+                return true;
+            }
+        }
+
+        return false;
     }
     
 }

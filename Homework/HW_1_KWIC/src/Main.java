@@ -14,11 +14,11 @@ public class Main {
         Output output = new ConsoleOut();
         LineStorage storage = new LineStorage();
         CommandValidator commandValidator = new CommandValidator();
-        CommandProcessor commandProcessor = new CommandProcessor(storage, output);
 
         // store original lines
         storage.setLines(input.readLines());
 
+        CommandProcessor commandProcessor = new CommandProcessor(storage, output);
         
         try (Scanner scanner = new Scanner(System.in)) {
             output.printOutputLine("\nKWIC System Ready to Process Commands:");
@@ -28,9 +28,7 @@ public class Main {
                 
                 if (!commandValidator.validateCommand(command)) {
                     System.out.println("Invalid Command");
-                }
-                
-                if (!commandProcessor.processCommand(command)) {
+                } else if (!commandProcessor.processCommand(command)) {
                     break;
                 }
             }

@@ -4,9 +4,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class IndexProcessor extends CommandProcessor {
-    private LineStorage originalLines;
-    private final Map<String, List<Integer>> index;
-    private Output output;
+    private final Map<String, Integer> index;
 
     public IndexProcessor (LineStorage originalLines, Output output) {
         super(originalLines, output);
@@ -28,10 +26,12 @@ public class IndexProcessor extends CommandProcessor {
 
         for (String word : keywords) {
             for (String line : originalLines.getLines()) {
-                if (!index.containsKey(word)) {
-                    index.put(word, new ArrayList<>());
+                if (line.contains(word)) {
+                    if (!index.containsKey(word)) {
+                        index.put(word, 0);
+                    }
+                    index.merge(word, 1, Integer::sum);
                 }
-                index.get(word).add(originalLines.getLines().indexOf(line));
             }
         }
     }
@@ -43,26 +43,19 @@ public class IndexProcessor extends CommandProcessor {
 
         List<String> table = new ArrayList<>();
 
-        for (Map.Entry<String, List<Integer>> entry : index.entrySet()) {
+        for (Map.Entry<String, Integer> entry : index.entrySet()) {
             String keyword = entry.getKey();
-            List<Integer> lines = entry.getValue();
-
+            Integer value = entry.getValue();
+        
             StringBuilder sb = new StringBuilder();
-            sb.append(keyword).append(", ");
-
-            for (int i = 0; i < lines.size(); i++) {
-                sb.append(lines.get(i));
-                if (i < lines.size() - 1) {
-                    sb.append(" ");
-                }
-            }
-
+            sb.append(keyword).append(", ").append(value);
+        
             table.add(sb.toString());
         }
 
         output.printOutput(table);
 
     }
-    
+
     
 }

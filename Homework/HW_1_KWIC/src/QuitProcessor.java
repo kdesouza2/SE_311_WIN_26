@@ -1,5 +1,4 @@
 public class QuitProcessor extends CommandProcessor {
-    private Output output;
 
     public QuitProcessor(LineStorage originalLines, Output output) {
         super(originalLines, output);
