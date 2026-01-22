@@ -75,6 +75,7 @@ Handles search command functionality
 **TxtIn.java** <br>
 Implements Input.java and handles reading from a .txt file
 
-
+### Contact
+Contact me at kad474@drexel.edu with any questions 
 
 
