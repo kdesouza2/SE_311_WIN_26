@@ -13,7 +13,7 @@ public class ConsoleOut implements Output {
     }
 
     @Override
-    public void printOutput(String line) {
+    public void printOutputLine(String line) {
         System.out.println(line);
     }
     

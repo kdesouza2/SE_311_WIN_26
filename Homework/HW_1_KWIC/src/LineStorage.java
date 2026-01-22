@@ -15,4 +15,8 @@ public class LineStorage {
     public void setLines(List<String> newInput) {
         this.lines = newInput;
     }
+
+    public boolean isEmpty() {
+        return (lines.isEmpty());
+    }
 }

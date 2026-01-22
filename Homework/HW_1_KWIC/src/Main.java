@@ -11,24 +11,29 @@ public class Main {
 
         String filename = args[0];
         Input input = new TxtIn(filename);
-
+        Output output = new ConsoleOut();
         LineStorage storage = new LineStorage();
+        CommandValidator commandValidator = new CommandValidator();
+        CommandProcessor commandProcessor = new CommandProcessor(storage, output);
 
         // store original lines
         storage.setLines(input.readLines());
 
-        CommandValidator commandValidator = new CommandValidator();
         
-        Scanner scanner = new Scanner(System.in);
-
-        while (true) {
-            System.out.print("> ");
-            String command = scanner.nextLine();
-
-            if (commandValidator.validateCommand(command)) {
+        try (Scanner scanner = new Scanner(System.in)) {
+            output.printOutputLine("\nKWIC System Ready to Process Commands:");
+            while (true) {
+                System.out.print("\n> ");
+                String command = scanner.nextLine();
                 
+                if (!commandValidator.validateCommand(command)) {
+                    System.out.println("Invalid Command");
+                }
+                
+                if (!commandProcessor.processCommand(command)) {
+                    break;
+                }
             }
-
         }
 
     }

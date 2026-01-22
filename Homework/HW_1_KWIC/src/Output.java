@@ -4,6 +4,6 @@ public interface Output {
     
     public void printOutput(List<String> lines);
 
-    public void printOutput(String line);
+    public void printOutputLine(String line);
 
 }
