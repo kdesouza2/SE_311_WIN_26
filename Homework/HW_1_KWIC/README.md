@@ -4,7 +4,7 @@
 Navigate to HW_1_KWIC folder, open terminal and run java -cp out src/Main.java inputs/sample.txt
 
 ### How to Use Console Commands
-This program accepts 4 commands: "kwic", "index", "search [keyword]", "quit"
+This program accepts 4 commands: "kwic", "index", "search [keyword]", "quit" <br>
 This program is case-sensitive so leave all commands and keywords in lowercase 
 
 **kwic**
