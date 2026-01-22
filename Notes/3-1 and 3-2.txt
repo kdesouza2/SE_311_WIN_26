@@ -45,10 +45,13 @@ UML Diagram Family
             ~Specify the what not the how
 2. The Process View
 
-Component View
+Component Diagram
     A component is an independently installable, and executable unit
     A component represents a modular part of a system
     2 approaches:
         1. Black box approach hides the component's internal structure
         2. White box approach shows the component's internal structure
 
+Deployment Diagram
+    Used to model the physical realization of software systems
+    
