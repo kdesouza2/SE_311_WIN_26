@@ -1,7 +1,7 @@
-How to address changes in:
-○ Major classes --> I tried my best to abstract where I can so you'll just need to create another concrete class
-○ Key attributes and methods --> Refactor my code to adapt to the change
-○ Relationships among modules --> Refactor my code to adapt to the change
+How to address changes in: <br>
+○ Major classes --> I tried my best to abstract where I can so you'll just need to create another concrete class <br>
+○ Key attributes and methods --> Refactor my code to adapt to the change <br>
+○ Relationships among modules --> Refactor my code to adapt to the change <br>
 
 
 ```plantuml
