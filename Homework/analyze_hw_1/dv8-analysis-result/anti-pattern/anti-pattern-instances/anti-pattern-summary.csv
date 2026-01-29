@@ -1,0 +1,4 @@
+Type,InstanceCount,DistinctFileCount
+UnhealthyInheritance,3,10
+Clique,1,5
+Total,4,10

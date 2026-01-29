@@ -1,0 +1,1672 @@
+{
+  "schemaVersion" : "1.0",
+  "name" : "dependency-file-sdsm",
+  "variables" : [ "src/Alphabetizer.java", "src/AscendingAlphabetizer.java", "src/CommandProcessor.java", "src/CommandValidator.java", "src/ConsoleOut.java", "src/DescendingAlphabetizer.java", "src/IndexProcessor.java", "src/Input.java", "src/KWICProcessor.java", "src/LineStorage.java", "src/Main.java", "src/Output.java", "src/QuitProcessor.java", "src/SearchProcessor.java", "src/TxtIn.java" ],
+  "cells" : [ {
+    "src" : 4,
+    "dest" : 11,
+    "values" : {
+      "Implement" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "ConsoleOut",
+        "file" : "src/ConsoleOut.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "dest" : {
+        "object" : "Output",
+        "file" : "src/Output.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Implement"
+    } ]
+  }, {
+    "src" : 1,
+    "dest" : 0,
+    "values" : {
+      "Implement" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "AscendingAlphabetizer",
+        "file" : "src/AscendingAlphabetizer.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "dest" : {
+        "object" : "Alphabetizer",
+        "file" : "src/Alphabetizer.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Implement"
+    } ]
+  }, {
+    "src" : 6,
+    "dest" : 2,
+    "values" : {
+      "Call" : 2.0,
+      "Extend" : 1.0,
+      "Use" : 3.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "IndexProcessor.IndexProcessor",
+        "file" : "src/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 10
+      },
+      "dest" : {
+        "object" : "CommandProcessor",
+        "file" : "src/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "IndexProcessor.createIndex",
+        "file" : "src/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 18
+      },
+      "dest" : {
+        "object" : "CommandProcessor.parseCommand",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 10
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "IndexProcessor",
+        "file" : "src/IndexProcessor.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "dest" : {
+        "object" : "CommandProcessor",
+        "file" : "src/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "type" : "Extend"
+    }, {
+      "src" : {
+        "object" : "IndexProcessor.createIndex",
+        "file" : "src/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 17
+      },
+      "dest" : {
+        "object" : "CommandProcessor.originalLines",
+        "file" : "src/CommandProcessor.java",
+        "type" : "var",
+        "lineNumber" : 2
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "IndexProcessor.createIndex",
+        "file" : "src/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 28
+      },
+      "dest" : {
+        "object" : "CommandProcessor.originalLines",
+        "file" : "src/CommandProcessor.java",
+        "type" : "var",
+        "lineNumber" : 2
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "IndexProcessor.execute",
+        "file" : "src/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 56
+      },
+      "dest" : {
+        "object" : "CommandProcessor.output",
+        "file" : "src/CommandProcessor.java",
+        "type" : "var",
+        "lineNumber" : 3
+      },
+      "type" : "Use"
+    } ]
+  }, {
+    "src" : 12,
+    "dest" : 2,
+    "values" : {
+      "Call" : 1.0,
+      "Extend" : 1.0,
+      "Use" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "QuitProcessor.QuitProcessor",
+        "file" : "src/QuitProcessor.java",
+        "type" : "function",
+        "lineNumber" : 4
+      },
+      "dest" : {
+        "object" : "CommandProcessor",
+        "file" : "src/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "QuitProcessor",
+        "file" : "src/QuitProcessor.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "dest" : {
+        "object" : "CommandProcessor",
+        "file" : "src/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "type" : "Extend"
+    }, {
+      "src" : {
+        "object" : "QuitProcessor.execute",
+        "file" : "src/QuitProcessor.java",
+        "type" : "function",
+        "lineNumber" : 8
+      },
+      "dest" : {
+        "object" : "CommandProcessor.output",
+        "file" : "src/CommandProcessor.java",
+        "type" : "var",
+        "lineNumber" : 3
+      },
+      "type" : "Use"
+    } ]
+  }, {
+    "src" : 5,
+    "dest" : 0,
+    "values" : {
+      "Implement" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "DescendingAlphabetizer",
+        "file" : "src/DescendingAlphabetizer.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "dest" : {
+        "object" : "Alphabetizer",
+        "file" : "src/Alphabetizer.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Implement"
+    } ]
+  }, {
+    "src" : 10,
+    "dest" : 14,
+    "values" : {
+      "Call" : 1.0,
+      "Create" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "src/Main.java",
+        "type" : "function",
+        "lineNumber" : 13
+      },
+      "dest" : {
+        "object" : "TxtIn",
+        "file" : "src/TxtIn.java",
+        "type" : "type",
+        "lineNumber" : 7
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "src/Main.java",
+        "type" : "function",
+        "lineNumber" : 13
+      },
+      "dest" : {
+        "object" : "TxtIn",
+        "file" : "src/TxtIn.java",
+        "type" : "type",
+        "lineNumber" : 7
+      },
+      "type" : "Create"
+    } ]
+  }, {
+    "src" : 12,
+    "dest" : 11,
+    "values" : {
+      "Call" : 1.0,
+      "Parameter" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "QuitProcessor.execute",
+        "file" : "src/QuitProcessor.java",
+        "type" : "function",
+        "lineNumber" : 8
+      },
+      "dest" : {
+        "object" : "Output.printOutputLine",
+        "file" : "src/Output.java",
+        "type" : "function",
+        "lineNumber" : 7
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "QuitProcessor.QuitProcessor",
+        "file" : "src/QuitProcessor.java",
+        "type" : "function",
+        "lineNumber" : 3
+      },
+      "dest" : {
+        "object" : "Output",
+        "file" : "src/Output.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Parameter"
+    } ]
+  }, {
+    "src" : 12,
+    "dest" : 9,
+    "values" : {
+      "Parameter" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "QuitProcessor.QuitProcessor",
+        "file" : "src/QuitProcessor.java",
+        "type" : "function",
+        "lineNumber" : 3
+      },
+      "dest" : {
+        "object" : "LineStorage",
+        "file" : "src/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Parameter"
+    } ]
+  }, {
+    "src" : 8,
+    "dest" : 11,
+    "values" : {
+      "Call" : 1.0,
+      "Parameter" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "KWICProcessor.execute",
+        "file" : "src/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 63
+      },
+      "dest" : {
+        "object" : "Output.printOutput",
+        "file" : "src/Output.java",
+        "type" : "function",
+        "lineNumber" : 5
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "KWICProcessor.KWICProcessor",
+        "file" : "src/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 7
+      },
+      "dest" : {
+        "object" : "Output",
+        "file" : "src/Output.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Parameter"
+    } ]
+  }, {
+    "src" : 2,
+    "dest" : 9,
+    "values" : {
+      "Use" : 1.0,
+      "Parameter" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "CommandProcessor.CommandProcessor",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 6
+      },
+      "dest" : {
+        "object" : "LineStorage",
+        "file" : "src/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "CommandProcessor.CommandProcessor",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 5
+      },
+      "dest" : {
+        "object" : "LineStorage",
+        "file" : "src/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Parameter"
+    }, {
+      "src" : {
+        "object" : "CommandProcessor",
+        "file" : "src/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 2
+      },
+      "dest" : {
+        "object" : "LineStorage",
+        "file" : "src/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 2,
+    "dest" : 8,
+    "values" : {
+      "Call" : 2.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "CommandProcessor.processCommand",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 20
+      },
+      "dest" : {
+        "object" : "KWICProcessor",
+        "file" : "src/KWICProcessor.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "CommandProcessor.processCommand",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 21
+      },
+      "dest" : {
+        "object" : "KWICProcessor.execute",
+        "file" : "src/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 57
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "CommandProcessor.processCommand",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 20
+      },
+      "dest" : {
+        "object" : "KWICProcessor",
+        "file" : "src/KWICProcessor.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "CommandProcessor.processCommand",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 20
+      },
+      "dest" : {
+        "object" : "KWICProcessor",
+        "file" : "src/KWICProcessor.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 6,
+    "dest" : 9,
+    "values" : {
+      "Call" : 2.0,
+      "Parameter" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "IndexProcessor.createIndex",
+        "file" : "src/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 17
+      },
+      "dest" : {
+        "object" : "LineStorage.getLines",
+        "file" : "src/LineStorage.java",
+        "type" : "function",
+        "lineNumber" : 11
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "IndexProcessor.createIndex",
+        "file" : "src/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 28
+      },
+      "dest" : {
+        "object" : "LineStorage.getLines",
+        "file" : "src/LineStorage.java",
+        "type" : "function",
+        "lineNumber" : 11
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "IndexProcessor.IndexProcessor",
+        "file" : "src/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 9
+      },
+      "dest" : {
+        "object" : "LineStorage",
+        "file" : "src/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Parameter"
+    } ]
+  }, {
+    "src" : 2,
+    "dest" : 6,
+    "values" : {
+      "Call" : 2.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "CommandProcessor.processCommand",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 30
+      },
+      "dest" : {
+        "object" : "IndexProcessor",
+        "file" : "src/IndexProcessor.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "CommandProcessor.processCommand",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 31
+      },
+      "dest" : {
+        "object" : "IndexProcessor.execute",
+        "file" : "src/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 39
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "CommandProcessor.processCommand",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 30
+      },
+      "dest" : {
+        "object" : "IndexProcessor",
+        "file" : "src/IndexProcessor.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "CommandProcessor.processCommand",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 30
+      },
+      "dest" : {
+        "object" : "IndexProcessor",
+        "file" : "src/IndexProcessor.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 8,
+    "dest" : 1,
+    "values" : {
+      "Call" : 2.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "KWICProcessor.alphabetize",
+        "file" : "src/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 30
+      },
+      "dest" : {
+        "object" : "AscendingAlphabetizer",
+        "file" : "src/AscendingAlphabetizer.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "KWICProcessor.alphabetize",
+        "file" : "src/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 31
+      },
+      "dest" : {
+        "object" : "AscendingAlphabetizer.sort",
+        "file" : "src/AscendingAlphabetizer.java",
+        "type" : "function",
+        "lineNumber" : 7
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "KWICProcessor.alphabetize",
+        "file" : "src/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 30
+      },
+      "dest" : {
+        "object" : "AscendingAlphabetizer",
+        "file" : "src/AscendingAlphabetizer.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "KWICProcessor.alphabetize",
+        "file" : "src/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 30
+      },
+      "dest" : {
+        "object" : "AscendingAlphabetizer",
+        "file" : "src/AscendingAlphabetizer.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 10,
+    "dest" : 4,
+    "values" : {
+      "Call" : 1.0,
+      "Create" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "src/Main.java",
+        "type" : "function",
+        "lineNumber" : 14
+      },
+      "dest" : {
+        "object" : "ConsoleOut",
+        "file" : "src/ConsoleOut.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "src/Main.java",
+        "type" : "function",
+        "lineNumber" : 14
+      },
+      "dest" : {
+        "object" : "ConsoleOut",
+        "file" : "src/ConsoleOut.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Create"
+    } ]
+  }, {
+    "src" : 10,
+    "dest" : 3,
+    "values" : {
+      "Call" : 2.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "src/Main.java",
+        "type" : "function",
+        "lineNumber" : 16
+      },
+      "dest" : {
+        "object" : "CommandValidator",
+        "file" : "src/CommandValidator.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "src/Main.java",
+        "type" : "function",
+        "lineNumber" : 29
+      },
+      "dest" : {
+        "object" : "CommandValidator.validateCommand",
+        "file" : "src/CommandValidator.java",
+        "type" : "function",
+        "lineNumber" : 9
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "src/Main.java",
+        "type" : "function",
+        "lineNumber" : 16
+      },
+      "dest" : {
+        "object" : "CommandValidator",
+        "file" : "src/CommandValidator.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "src/Main.java",
+        "type" : "function",
+        "lineNumber" : 16
+      },
+      "dest" : {
+        "object" : "CommandValidator",
+        "file" : "src/CommandValidator.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 10,
+    "dest" : 2,
+    "values" : {
+      "Call" : 2.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "src/Main.java",
+        "type" : "function",
+        "lineNumber" : 21
+      },
+      "dest" : {
+        "object" : "CommandProcessor",
+        "file" : "src/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "src/Main.java",
+        "type" : "function",
+        "lineNumber" : 31
+      },
+      "dest" : {
+        "object" : "CommandProcessor.processCommand",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 14
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "src/Main.java",
+        "type" : "function",
+        "lineNumber" : 21
+      },
+      "dest" : {
+        "object" : "CommandProcessor",
+        "file" : "src/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "src/Main.java",
+        "type" : "function",
+        "lineNumber" : 21
+      },
+      "dest" : {
+        "object" : "CommandProcessor",
+        "file" : "src/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 8,
+    "dest" : 2,
+    "values" : {
+      "Call" : 1.0,
+      "Extend" : 1.0,
+      "Use" : 2.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "KWICProcessor.KWICProcessor",
+        "file" : "src/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 8
+      },
+      "dest" : {
+        "object" : "CommandProcessor",
+        "file" : "src/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "KWICProcessor",
+        "file" : "src/KWICProcessor.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "dest" : {
+        "object" : "CommandProcessor",
+        "file" : "src/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "type" : "Extend"
+    }, {
+      "src" : {
+        "object" : "KWICProcessor.createKWICTable",
+        "file" : "src/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 16
+      },
+      "dest" : {
+        "object" : "CommandProcessor.originalLines",
+        "file" : "src/CommandProcessor.java",
+        "type" : "var",
+        "lineNumber" : 2
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "KWICProcessor.execute",
+        "file" : "src/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 63
+      },
+      "dest" : {
+        "object" : "CommandProcessor.output",
+        "file" : "src/CommandProcessor.java",
+        "type" : "var",
+        "lineNumber" : 3
+      },
+      "type" : "Use"
+    } ]
+  }, {
+    "src" : 2,
+    "dest" : 12,
+    "values" : {
+      "Call" : 2.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "CommandProcessor.processCommand",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 35
+      },
+      "dest" : {
+        "object" : "QuitProcessor",
+        "file" : "src/QuitProcessor.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "CommandProcessor.processCommand",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 36
+      },
+      "dest" : {
+        "object" : "QuitProcessor.execute",
+        "file" : "src/QuitProcessor.java",
+        "type" : "function",
+        "lineNumber" : 7
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "CommandProcessor.processCommand",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 35
+      },
+      "dest" : {
+        "object" : "QuitProcessor",
+        "file" : "src/QuitProcessor.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "CommandProcessor.processCommand",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 35
+      },
+      "dest" : {
+        "object" : "QuitProcessor",
+        "file" : "src/QuitProcessor.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 2,
+    "dest" : 11,
+    "values" : {
+      "Use" : 1.0,
+      "Parameter" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "CommandProcessor.CommandProcessor",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 7
+      },
+      "dest" : {
+        "object" : "Output",
+        "file" : "src/Output.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "CommandProcessor.CommandProcessor",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 5
+      },
+      "dest" : {
+        "object" : "Output",
+        "file" : "src/Output.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Parameter"
+    }, {
+      "src" : {
+        "object" : "CommandProcessor",
+        "file" : "src/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "dest" : {
+        "object" : "Output",
+        "file" : "src/Output.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 10,
+    "dest" : 9,
+    "values" : {
+      "Call" : 2.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "src/Main.java",
+        "type" : "function",
+        "lineNumber" : 15
+      },
+      "dest" : {
+        "object" : "LineStorage",
+        "file" : "src/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "src/Main.java",
+        "type" : "function",
+        "lineNumber" : 19
+      },
+      "dest" : {
+        "object" : "LineStorage.setLines",
+        "file" : "src/LineStorage.java",
+        "type" : "function",
+        "lineNumber" : 15
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "src/Main.java",
+        "type" : "function",
+        "lineNumber" : 15
+      },
+      "dest" : {
+        "object" : "LineStorage",
+        "file" : "src/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "src/Main.java",
+        "type" : "function",
+        "lineNumber" : 15
+      },
+      "dest" : {
+        "object" : "LineStorage",
+        "file" : "src/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 2,
+    "dest" : 13,
+    "values" : {
+      "Call" : 2.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "CommandProcessor.processCommand",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 25
+      },
+      "dest" : {
+        "object" : "SearchProcessor",
+        "file" : "src/SearchProcessor.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "CommandProcessor.processCommand",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 26
+      },
+      "dest" : {
+        "object" : "SearchProcessor.execute",
+        "file" : "src/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 12
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "CommandProcessor.processCommand",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 25
+      },
+      "dest" : {
+        "object" : "SearchProcessor",
+        "file" : "src/SearchProcessor.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "CommandProcessor.processCommand",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 25
+      },
+      "dest" : {
+        "object" : "SearchProcessor",
+        "file" : "src/SearchProcessor.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 10,
+    "dest" : 7,
+    "values" : {
+      "Call" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "src/Main.java",
+        "type" : "function",
+        "lineNumber" : 19
+      },
+      "dest" : {
+        "object" : "Input.readLines",
+        "file" : "src/Input.java",
+        "type" : "function",
+        "lineNumber" : 5
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "src/Main.java",
+        "type" : "function",
+        "lineNumber" : 13
+      },
+      "dest" : {
+        "object" : "Input",
+        "file" : "src/Input.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 14,
+    "dest" : 7,
+    "values" : {
+      "Implement" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "TxtIn",
+        "file" : "src/TxtIn.java",
+        "type" : "type",
+        "lineNumber" : 7
+      },
+      "dest" : {
+        "object" : "Input",
+        "file" : "src/Input.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Implement"
+    } ]
+  }, {
+    "src" : 13,
+    "dest" : 11,
+    "values" : {
+      "Call" : 4.0,
+      "Parameter" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "SearchProcessor.execute",
+        "file" : "src/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 27
+      },
+      "dest" : {
+        "object" : "Output.printOutputLine",
+        "file" : "src/Output.java",
+        "type" : "function",
+        "lineNumber" : 7
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "SearchProcessor.execute",
+        "file" : "src/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 29
+      },
+      "dest" : {
+        "object" : "Output.printOutputLine",
+        "file" : "src/Output.java",
+        "type" : "function",
+        "lineNumber" : 7
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "SearchProcessor.execute",
+        "file" : "src/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 30
+      },
+      "dest" : {
+        "object" : "Output.printOutputLine",
+        "file" : "src/Output.java",
+        "type" : "function",
+        "lineNumber" : 7
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "SearchProcessor.execute",
+        "file" : "src/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 31
+      },
+      "dest" : {
+        "object" : "Output.printOutput",
+        "file" : "src/Output.java",
+        "type" : "function",
+        "lineNumber" : 5
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "SearchProcessor.SearchProcessor",
+        "file" : "src/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 7
+      },
+      "dest" : {
+        "object" : "Output",
+        "file" : "src/Output.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Parameter"
+    } ]
+  }, {
+    "src" : 10,
+    "dest" : 11,
+    "values" : {
+      "Call" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "src/Main.java",
+        "type" : "function",
+        "lineNumber" : 24
+      },
+      "dest" : {
+        "object" : "Output.printOutputLine",
+        "file" : "src/Output.java",
+        "type" : "function",
+        "lineNumber" : 7
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "Main.main",
+        "file" : "src/Main.java",
+        "type" : "function",
+        "lineNumber" : 14
+      },
+      "dest" : {
+        "object" : "Output",
+        "file" : "src/Output.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 13,
+    "dest" : 2,
+    "values" : {
+      "Call" : 2.0,
+      "Extend" : 1.0,
+      "Use" : 6.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "SearchProcessor.SearchProcessor",
+        "file" : "src/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 8
+      },
+      "dest" : {
+        "object" : "CommandProcessor",
+        "file" : "src/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "SearchProcessor.execute",
+        "file" : "src/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 13
+      },
+      "dest" : {
+        "object" : "CommandProcessor.parseCommand",
+        "file" : "src/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 10
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "SearchProcessor",
+        "file" : "src/SearchProcessor.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "dest" : {
+        "object" : "CommandProcessor",
+        "file" : "src/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 1
+      },
+      "type" : "Extend"
+    }, {
+      "src" : {
+        "object" : "SearchProcessor.execute",
+        "file" : "src/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 19
+      },
+      "dest" : {
+        "object" : "CommandProcessor.originalLines",
+        "file" : "src/CommandProcessor.java",
+        "type" : "var",
+        "lineNumber" : 2
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "SearchProcessor.execute",
+        "file" : "src/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 21
+      },
+      "dest" : {
+        "object" : "CommandProcessor.originalLines",
+        "file" : "src/CommandProcessor.java",
+        "type" : "var",
+        "lineNumber" : 2
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "SearchProcessor.execute",
+        "file" : "src/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 27
+      },
+      "dest" : {
+        "object" : "CommandProcessor.output",
+        "file" : "src/CommandProcessor.java",
+        "type" : "var",
+        "lineNumber" : 3
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "SearchProcessor.execute",
+        "file" : "src/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 29
+      },
+      "dest" : {
+        "object" : "CommandProcessor.output",
+        "file" : "src/CommandProcessor.java",
+        "type" : "var",
+        "lineNumber" : 3
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "SearchProcessor.execute",
+        "file" : "src/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 30
+      },
+      "dest" : {
+        "object" : "CommandProcessor.output",
+        "file" : "src/CommandProcessor.java",
+        "type" : "var",
+        "lineNumber" : 3
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "SearchProcessor.execute",
+        "file" : "src/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 31
+      },
+      "dest" : {
+        "object" : "CommandProcessor.output",
+        "file" : "src/CommandProcessor.java",
+        "type" : "var",
+        "lineNumber" : 3
+      },
+      "type" : "Use"
+    } ]
+  }, {
+    "src" : 8,
+    "dest" : 9,
+    "values" : {
+      "Call" : 6.0,
+      "Use" : 1.0,
+      "Create" : 1.0,
+      "Parameter" : 2.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "KWICProcessor.KWICProcessor",
+        "file" : "src/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 9
+      },
+      "dest" : {
+        "object" : "LineStorage",
+        "file" : "src/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "KWICProcessor.createKWICTable",
+        "file" : "src/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 26
+      },
+      "dest" : {
+        "object" : "LineStorage.setLines",
+        "file" : "src/LineStorage.java",
+        "type" : "function",
+        "lineNumber" : 15
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "KWICProcessor.circularShift",
+        "file" : "src/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 37
+      },
+      "dest" : {
+        "object" : "LineStorage.getLines",
+        "file" : "src/LineStorage.java",
+        "type" : "function",
+        "lineNumber" : 11
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "KWICProcessor.circularShift",
+        "file" : "src/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 50
+      },
+      "dest" : {
+        "object" : "LineStorage.getLines",
+        "file" : "src/LineStorage.java",
+        "type" : "function",
+        "lineNumber" : 11
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "KWICProcessor.execute",
+        "file" : "src/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 59
+      },
+      "dest" : {
+        "object" : "LineStorage.isEmpty",
+        "file" : "src/LineStorage.java",
+        "type" : "function",
+        "lineNumber" : 19
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "KWICProcessor.execute",
+        "file" : "src/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 63
+      },
+      "dest" : {
+        "object" : "LineStorage.getLines",
+        "file" : "src/LineStorage.java",
+        "type" : "function",
+        "lineNumber" : 11
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "KWICProcessor.KWICProcessor",
+        "file" : "src/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 9
+      },
+      "dest" : {
+        "object" : "LineStorage",
+        "file" : "src/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "KWICProcessor.KWICProcessor",
+        "file" : "src/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 9
+      },
+      "dest" : {
+        "object" : "LineStorage",
+        "file" : "src/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "KWICProcessor.KWICProcessor",
+        "file" : "src/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 7
+      },
+      "dest" : {
+        "object" : "LineStorage",
+        "file" : "src/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Parameter"
+    }, {
+      "src" : {
+        "object" : "KWICProcessor.circularShift",
+        "file" : "src/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 34
+      },
+      "dest" : {
+        "object" : "LineStorage",
+        "file" : "src/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Parameter"
+    }, {
+      "src" : {
+        "object" : "KWICProcessor",
+        "file" : "src/KWICProcessor.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "dest" : {
+        "object" : "LineStorage",
+        "file" : "src/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 13,
+    "dest" : 9,
+    "values" : {
+      "Call" : 2.0,
+      "Parameter" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "SearchProcessor.execute",
+        "file" : "src/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 19
+      },
+      "dest" : {
+        "object" : "LineStorage.getLines",
+        "file" : "src/LineStorage.java",
+        "type" : "function",
+        "lineNumber" : 11
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "SearchProcessor.execute",
+        "file" : "src/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 21
+      },
+      "dest" : {
+        "object" : "LineStorage.getLines",
+        "file" : "src/LineStorage.java",
+        "type" : "function",
+        "lineNumber" : 11
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "SearchProcessor.SearchProcessor",
+        "file" : "src/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 7
+      },
+      "dest" : {
+        "object" : "LineStorage",
+        "file" : "src/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 4
+      },
+      "type" : "Parameter"
+    } ]
+  }, {
+    "src" : 6,
+    "dest" : 11,
+    "values" : {
+      "Call" : 1.0,
+      "Parameter" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "IndexProcessor.execute",
+        "file" : "src/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 56
+      },
+      "dest" : {
+        "object" : "Output.printOutput",
+        "file" : "src/Output.java",
+        "type" : "function",
+        "lineNumber" : 5
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "IndexProcessor.IndexProcessor",
+        "file" : "src/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 9
+      },
+      "dest" : {
+        "object" : "Output",
+        "file" : "src/Output.java",
+        "type" : "type",
+        "lineNumber" : 3
+      },
+      "type" : "Parameter"
+    } ]
+  } ]
+}

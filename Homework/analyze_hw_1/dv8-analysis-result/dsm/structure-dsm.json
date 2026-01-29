@@ -1,0 +1,228 @@
+{
+  "@schemaVersion" : "1.0",
+  "name" : "structure-dsm",
+  "variables" : [ "src/Alphabetizer.java", "src/AscendingAlphabetizer.java", "src/CommandProcessor.java", "src/CommandValidator.java", "src/ConsoleOut.java", "src/DescendingAlphabetizer.java", "src/IndexProcessor.java", "src/Input.java", "src/KWICProcessor.java", "src/LineStorage.java", "src/Main.java", "src/Output.java", "src/QuitProcessor.java", "src/SearchProcessor.java", "src/TxtIn.java" ],
+  "cells" : [ {
+    "src" : 1,
+    "dest" : 0,
+    "values" : {
+      "Implement" : 1.0
+    }
+  }, {
+    "src" : 2,
+    "dest" : 6,
+    "values" : {
+      "Create" : 1.0,
+      "Call" : 2.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 2,
+    "dest" : 8,
+    "values" : {
+      "Create" : 1.0,
+      "Call" : 2.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 2,
+    "dest" : 9,
+    "values" : {
+      "Parameter" : 1.0,
+      "Use" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 2,
+    "dest" : 11,
+    "values" : {
+      "Parameter" : 1.0,
+      "Use" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 2,
+    "dest" : 12,
+    "values" : {
+      "Create" : 1.0,
+      "Call" : 2.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 2,
+    "dest" : 13,
+    "values" : {
+      "Create" : 1.0,
+      "Call" : 2.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 4,
+    "dest" : 11,
+    "values" : {
+      "Implement" : 1.0
+    }
+  }, {
+    "src" : 5,
+    "dest" : 0,
+    "values" : {
+      "Implement" : 1.0
+    }
+  }, {
+    "src" : 6,
+    "dest" : 2,
+    "values" : {
+      "Call" : 2.0,
+      "Extend" : 1.0,
+      "Use" : 3.0
+    }
+  }, {
+    "src" : 6,
+    "dest" : 9,
+    "values" : {
+      "Parameter" : 1.0,
+      "Call" : 2.0
+    }
+  }, {
+    "src" : 6,
+    "dest" : 11,
+    "values" : {
+      "Parameter" : 1.0,
+      "Call" : 1.0
+    }
+  }, {
+    "src" : 8,
+    "dest" : 1,
+    "values" : {
+      "Contain" : 1.0,
+      "Call" : 2.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 8,
+    "dest" : 2,
+    "values" : {
+      "Extend" : 1.0,
+      "Use" : 2.0,
+      "Call" : 1.0
+    }
+  }, {
+    "src" : 8,
+    "dest" : 9,
+    "values" : {
+      "Create" : 1.0,
+      "Contain" : 1.0,
+      "Use" : 1.0,
+      "Parameter" : 2.0,
+      "Call" : 6.0
+    }
+  }, {
+    "src" : 8,
+    "dest" : 11,
+    "values" : {
+      "Parameter" : 1.0,
+      "Call" : 1.0
+    }
+  }, {
+    "src" : 10,
+    "dest" : 2,
+    "values" : {
+      "Contain" : 1.0,
+      "Call" : 2.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 10,
+    "dest" : 3,
+    "values" : {
+      "Contain" : 1.0,
+      "Create" : 1.0,
+      "Call" : 2.0
+    }
+  }, {
+    "src" : 10,
+    "dest" : 4,
+    "values" : {
+      "Call" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 10,
+    "dest" : 7,
+    "values" : {
+      "Contain" : 1.0,
+      "Call" : 1.0
+    }
+  }, {
+    "src" : 10,
+    "dest" : 9,
+    "values" : {
+      "Contain" : 1.0,
+      "Call" : 2.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 10,
+    "dest" : 11,
+    "values" : {
+      "Call" : 1.0,
+      "Contain" : 1.0
+    }
+  }, {
+    "src" : 10,
+    "dest" : 14,
+    "values" : {
+      "Call" : 1.0,
+      "Create" : 1.0
+    }
+  }, {
+    "src" : 12,
+    "dest" : 2,
+    "values" : {
+      "Use" : 1.0,
+      "Call" : 1.0,
+      "Extend" : 1.0
+    }
+  }, {
+    "src" : 12,
+    "dest" : 9,
+    "values" : {
+      "Parameter" : 1.0
+    }
+  }, {
+    "src" : 12,
+    "dest" : 11,
+    "values" : {
+      "Call" : 1.0,
+      "Parameter" : 1.0
+    }
+  }, {
+    "src" : 13,
+    "dest" : 2,
+    "values" : {
+      "Use" : 6.0,
+      "Call" : 2.0,
+      "Extend" : 1.0
+    }
+  }, {
+    "src" : 13,
+    "dest" : 9,
+    "values" : {
+      "Call" : 2.0,
+      "Parameter" : 1.0
+    }
+  }, {
+    "src" : 13,
+    "dest" : 11,
+    "values" : {
+      "Call" : 4.0,
+      "Parameter" : 1.0
+    }
+  }, {
+    "src" : 14,
+    "dest" : 7,
+    "values" : {
+      "Implement" : 1.0
+    }
+  } ]
+}
