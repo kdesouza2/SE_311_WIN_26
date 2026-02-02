@@ -1,3 +1,4 @@
+
 public class QuitProcessor extends CommandProcessor {
 
     public QuitProcessor(LineStorage originalLines, Output output) {

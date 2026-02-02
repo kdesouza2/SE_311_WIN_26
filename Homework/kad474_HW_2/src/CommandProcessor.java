@@ -1,3 +1,4 @@
+
 public class CommandProcessor {
     protected LineStorage originalLines;
     protected Output output;
