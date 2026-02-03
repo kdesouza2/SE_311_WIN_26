@@ -32,5 +32,9 @@ public class TxtIn implements Input {
     public void setFilename(String filename) {
         this.filename = filename;
     }
+
+    public String getFilename() {
+        return filename;
+    }
     
 }

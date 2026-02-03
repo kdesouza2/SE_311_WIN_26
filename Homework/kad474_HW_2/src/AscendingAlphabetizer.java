@@ -4,6 +4,9 @@ import java.util.List;
 
 public class AscendingAlphabetizer implements Alphabetizer {
 
+    public AscendingAlphabetizer() {
+    }
+
     @Override
     public List<String> sort(List<String> lines) {
         Collections.sort(lines);

@@ -19,18 +19,19 @@ public class SearchProcessor extends CommandProcessor {
         int currNum = 1;
         for (String line : originalLines.getLines()) {
             if (line.contains(keyword)) {
-                foundLines.add(String.format("%d  |  %s  | %d", currNum, line.replace(keyword, String.format("**%s**", keyword)), originalLines.getLines().indexOf(line) + 1));
+                foundLines.add(String.format("%d  |  %s  | %d", currNum, line.replace(keyword, String.format("[%s]", keyword)), originalLines.getLines().indexOf(line) + 1));
                 currNum++;
             }
         }
 
         if (foundLines.isEmpty()) {
-            System.out.println(String.format("[%s] not found.", keyword));
+            foundLines.add(0, String.format("[%s] not found.", keyword));
         } else {
-            System.out.println("Index  |  Line with Keyword Bolded  | Original Line Index");
-            System.out.println(String.format("%d sentence(s) found:", foundLines.size()));
-            output.printOutput(foundLines);
+            foundLines.add(0, String.format("%d sentence(s) found:", foundLines.size()));
+            foundLines.add(1, "Index  |  Line with Keyword Bolded  | Original Line Index");
         }
+
+        output.printOutput(foundLines);
 
     }
 

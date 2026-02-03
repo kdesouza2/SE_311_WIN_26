@@ -14,12 +14,17 @@ public class IndexProcessor extends CommandProcessor {
 
     private void createIndex() {
         List<String> keywords = new ArrayList<>();
+        String trivialWords = "";
+
+        if (OptionReader.getString("WordFiltering").equals("Yes")) {
+            trivialWords = OptionReader.getString("TrivialWords");
+        }
 
         for (String line : originalLines.getLines()) {
             String[] words = parseCommand(line);
 
             for (String word : words) {
-                if (!keywords.contains(word)) {
+                if (!keywords.contains(word) && !trivialWords.contains(word)) {
                     keywords.add(word);
                 }
             }

@@ -7,6 +7,7 @@ public class OptionReader {
 	private OptionReader() {
 	}
 	
+    @SuppressWarnings("Convert2Diamond")
 	public static void readOptions() {
 		ResourceBundle rb = ResourceBundle.getBundle("config");
 		Enumeration<String> keys = rb.getKeys();
@@ -19,22 +20,13 @@ public class OptionReader {
 	}
 	
 	public static Object getObjectFromKey(String keyStr) { 
-		if (!userOptions.containsKey(keyStr)) {
-			return null;
+		Object kwicObj = null;
+		if (userOptions.containsKey(keyStr)) {
+			String objName;
+			objName = userOptions.get(keyStr);
+			kwicObj = kwicObjLoader.loadObject(objName);
 		}
-	
-		// First lookup (Input -> TxtInputObj)
-		String objKey = userOptions.get(keyStr);
-	
-		// Second lookup (TxtInputObj -> TxtIn)
-		if (!userOptions.containsKey(objKey)) {
-			throw new RuntimeException("Class mapping not found for: " + objKey);
-		}
-	
-		String className = userOptions.get(objKey);
-	
-		// Load actual class
-		return kwicObjLoader.loadObject(className);
+		return kwicObj;
 	}
 	
 	public static Object getObjectFromStr(String objStr) {

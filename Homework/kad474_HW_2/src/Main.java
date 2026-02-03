@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Main {
@@ -16,14 +15,23 @@ public class Main {
         OptionReader.readOptions();
 
         // 2. Create objects from config
-        Input input = (Input) OptionReader.getObjectFromKey("Input");
-        Output output = (Output) OptionReader.getObjectFromKey("Output");
+        String typeOfInput = OptionReader.getString("Input");
+        Input input = (Input) OptionReader.getObjectFromKey(typeOfInput);
+        String typeOfOutput = OptionReader.getString("Output");
+        Output output = (Output) OptionReader.getObjectFromKey(typeOfOutput);
 
         // 3. Inject runtime data (filename)
-        if (input instanceof TxtIn) {
-            ((TxtIn) input).setFilename(filename);
-        } else {
-            ((CsvIn) input).setFilename(filename);
+        if (input instanceof TxtIn txtIn) {
+            txtIn.setFilename(filename);
+        } 
+
+        if (input instanceof CsvIn csvIn) {
+            csvIn.setFilename(filename);
+        }
+
+        if (output instanceof TxtOut txtOut) {
+            String outputFile = OptionReader.getString("OutputFileName");
+            txtOut.setFilename(outputFile);
         }
 
         LineStorage storage = new LineStorage();

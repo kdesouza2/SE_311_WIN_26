@@ -28,7 +28,10 @@ public class KWICProcessor extends CommandProcessor {
     }
 
     private List<String> alphabetize(List<String> lines) {
-        AscendingAlphabetizer alphabetizer = new AscendingAlphabetizer();
+
+        String typeOfSorter = OptionReader.getString("Order");
+        Alphabetizer alphabetizer = (Alphabetizer) OptionReader.getObjectFromKey(typeOfSorter);
+
         return (alphabetizer.sort(lines));
     }
 
