@@ -6,7 +6,7 @@ public class QuitProcessor extends CommandProcessor {
     }
 
     public void execute() {
-        output.printOutputLine("You've successfully exited the program.");
+        System.out.println("You've successfully exited the program.");
     }
     
 }

@@ -7,10 +7,9 @@ import java.util.Scanner;
 
 public class TxtIn implements Input {
     
-    private final String filename;
+    private String filename;
 
-    public TxtIn(String filename) {
-        this.filename = filename;
+    public TxtIn() {
     }
 
     @Override
@@ -27,6 +26,11 @@ public class TxtIn implements Input {
         }
 
         return input;
+    }
+
+    @Override
+    public void setFilename(String filename) {
+        this.filename = filename;
     }
     
 }

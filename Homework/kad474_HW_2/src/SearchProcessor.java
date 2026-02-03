@@ -25,10 +25,10 @@ public class SearchProcessor extends CommandProcessor {
         }
 
         if (foundLines.isEmpty()) {
-            output.printOutputLine(String.format("[%s] not found.", keyword));
+            System.out.println(String.format("[%s] not found.", keyword));
         } else {
-            output.printOutputLine("Index  |  Line with Keyword Bolded  | Original Line Index");
-            output.printOutputLine(String.format("%d sentence(s) found:", foundLines.size()));
+            System.out.println("Index  |  Line with Keyword Bolded  | Original Line Index");
+            System.out.println(String.format("%d sentence(s) found:", foundLines.size()));
             output.printOutput(foundLines);
         }
 

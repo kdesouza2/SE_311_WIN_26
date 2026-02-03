@@ -103,7 +103,9 @@ class AscendingAlphabetizer
 class DescendingAlphabetizer
 
 Input <|.. TxtIn
+Input <|.. CsvIn
 Output <|.. ConsoleOut
+Output <|.. TxtOut
 Alphabetizer <|.. AscendingAlphabetizer
 Alphabetizer <|.. DescendingAlphabetizer
 

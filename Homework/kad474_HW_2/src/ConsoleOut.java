@@ -13,9 +13,5 @@ public class ConsoleOut implements Output {
         }
     }
 
-    @Override
-    public void printOutputLine(String line) {
-        System.out.println(line);
-    }
     
 }
