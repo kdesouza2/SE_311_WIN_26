@@ -1,0 +1,159 @@
+{
+  "@schemaVersion" : "1.0",
+  "name" : "drh-clustering",
+  "structure" : [ {
+    "@type" : "group",
+    "name" : "L0",
+    "nested" : [ {
+      "@type" : "group",
+      "name" : "L0/M0",
+      "nested" : [ {
+        "@type" : "item",
+        "name" : "src/Output.java"
+      } ]
+    }, {
+      "@type" : "group",
+      "name" : "L0/M1",
+      "nested" : [ {
+        "@type" : "item",
+        "name" : "src/Alphabetizer.java"
+      } ]
+    } ]
+  }, {
+    "@type" : "group",
+    "name" : "L1",
+    "nested" : [ {
+      "@type" : "group",
+      "name" : "L1/M0",
+      "nested" : [ {
+        "@type" : "group",
+        "name" : "L1/M0/L0",
+        "nested" : [ {
+          "@type" : "group",
+          "name" : "L1/M0/L0/M0",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "src/Input.java"
+          } ]
+        } ]
+      }, {
+        "@type" : "group",
+        "name" : "L1/M0/L1",
+        "nested" : [ {
+          "@type" : "group",
+          "name" : "L1/M0/L1/M0",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "src/TxtOut.java"
+          } ]
+        }, {
+          "@type" : "group",
+          "name" : "L1/M0/L1/M1",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "src/TxtIn.java"
+          } ]
+        }, {
+          "@type" : "group",
+          "name" : "L1/M0/L1/M2",
+          "nested" : [ {
+            "@type" : "group",
+            "name" : "L1/M0/L1/M2/L0",
+            "nested" : [ {
+              "@type" : "group",
+              "name" : "L1/M0/L1/M2/L0/M0",
+              "nested" : [ {
+                "@type" : "item",
+                "name" : "src/LineStorage.java"
+              } ]
+            }, {
+              "@type" : "group",
+              "name" : "L1/M0/L1/M2/L0/M1",
+              "nested" : [ {
+                "@type" : "item",
+                "name" : "src/OptionReader.java"
+              }, {
+                "@type" : "item",
+                "name" : "src/KWICObjectLoader.java"
+              } ]
+            } ]
+          }, {
+            "@type" : "group",
+            "name" : "L1/M0/L1/M2/L1",
+            "nested" : [ {
+              "@type" : "group",
+              "name" : "L1/M0/L1/M2/L1/M0",
+              "nested" : [ {
+                "@type" : "item",
+                "name" : "src/SearchProcessor.java"
+              } ]
+            }, {
+              "@type" : "group",
+              "name" : "L1/M0/L1/M2/L1/M1",
+              "nested" : [ {
+                "@type" : "item",
+                "name" : "src/KWICProcessor.java"
+              } ]
+            }, {
+              "@type" : "group",
+              "name" : "L1/M0/L1/M2/L1/M2",
+              "nested" : [ {
+                "@type" : "item",
+                "name" : "src/IndexProcessor.java"
+              } ]
+            } ]
+          }, {
+            "@type" : "group",
+            "name" : "L1/M0/L1/M2/Control",
+            "nested" : [ {
+              "@type" : "item",
+              "name" : "src/CommandProcessor.java"
+            } ]
+          } ]
+        }, {
+          "@type" : "group",
+          "name" : "L1/M0/L1/M3",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "src/CommandValidator.java"
+          } ]
+        }, {
+          "@type" : "group",
+          "name" : "L1/M0/L1/M4",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "src/CsvIn.java"
+          } ]
+        } ]
+      }, {
+        "@type" : "group",
+        "name" : "L1/M0/Control",
+        "nested" : [ {
+          "@type" : "item",
+          "name" : "src/Main.java"
+        } ]
+      } ]
+    }, {
+      "@type" : "group",
+      "name" : "L1/M1",
+      "nested" : [ {
+        "@type" : "item",
+        "name" : "src/DescendingAlphabetizer.java"
+      } ]
+    }, {
+      "@type" : "group",
+      "name" : "L1/M2",
+      "nested" : [ {
+        "@type" : "item",
+        "name" : "src/ConsoleOut.java"
+      } ]
+    }, {
+      "@type" : "group",
+      "name" : "L1/M3",
+      "nested" : [ {
+        "@type" : "item",
+        "name" : "src/AscendingAlphabetizer.java"
+      } ]
+    } ]
+  } ]
+}
