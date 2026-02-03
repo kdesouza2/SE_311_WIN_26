@@ -1,0 +1,17 @@
+Design Rule Theory and DSM
+1. Software Product Family
+    Use Hierarchy
+
+2. Design Structure Matrix (DSM)
+    Model composite elements
+    Model heterogeneous dependencies
+    Model various design structures
+    Model independent modules created by design rules
+
+Modular Operator: Splitting
+
+
+
+Software Architecture Style
+A filter is a program/component
+A pipe is a way to interconnect two filters 

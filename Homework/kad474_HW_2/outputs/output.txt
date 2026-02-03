@@ -1,0 +1,8 @@
+architecture, 1
+crouching, 1
+dragon, 1
+hidden, 1
+sense, 1
+sensibility, 1
+software, 1
+tiger, 1

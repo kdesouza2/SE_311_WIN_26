@@ -10,7 +10,6 @@ class Main {
     -commandValidator: CommandValidator
     -input: Input
     -output: Output
-    -alphabetizer: Alphabetizer
     +start()
 }
 
@@ -27,7 +26,7 @@ class KWICObjectLoader {
 }
 
 OptionReader --> KWICObjectLoader
-Main --> OptionReader : uses
+Main --> OptionReader
 
 ' =========================
 ' Core Processing
@@ -51,7 +50,6 @@ Main o-- CommandProcessor
 Main o-- CommandValidator
 
 CommandProcessor --> LineStorage
-CommandProcessor --> Output
 
 ' =========================
 ' Command Processors
@@ -70,14 +68,10 @@ class IndexProcessor {
     +execute()
 }
 
-class QuitProcessor {
-    +execute()
-}
 
 CommandProcessor <|-- KWICProcessor
 CommandProcessor <|-- SearchProcessor
 CommandProcessor <|-- IndexProcessor
-CommandProcessor <|-- QuitProcessor
 
 ' =========================
 ' Interfaces
@@ -110,9 +104,7 @@ Alphabetizer <|.. AscendingAlphabetizer
 Alphabetizer <|.. DescendingAlphabetizer
 
 KWICProcessor --> Alphabetizer
-IndexProcessor --> Alphabetizer
 Main --> Input
 Main --> Output
-Main --> Alphabetizer
 
 @enduml

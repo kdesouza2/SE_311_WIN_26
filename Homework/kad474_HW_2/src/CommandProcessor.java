@@ -12,33 +12,30 @@ public class CommandProcessor {
 		return command.split(" ");
 	}
 
-    public boolean processCommand(String command) {
-		String[] parts = parseCommand(command);
-		String commandType = parts[0].toLowerCase();
+    public void processCommand(String[] command) {
+
+		String commandType = command[0].toLowerCase();
 
         switch (commandType) {
-            case "kwic" -> {
+            case "kwic-processing" -> {
                 KWICProcessor kwicProcessor = new KWICProcessor(originalLines, output);
                 kwicProcessor.execute();
-                return true;
             }
-            case "search" -> {
-                SearchProcessor searchProcessor = new SearchProcessor(originalLines, output, command);
-                searchProcessor.execute();
-                return true;
+            case "keyword-search" -> {
+                if (command[1] == null) {
+                    System.out.println("Invalid usage: keyword-search <keyword>");
+                } else {
+                    SearchProcessor searchProcessor = new SearchProcessor(originalLines, output, command[1]);
+                    searchProcessor.execute();
+                }
             }
-            case "index" -> {
+            case "index-generation" -> {
                 IndexProcessor indexProcessor = new IndexProcessor(originalLines, output);
                 indexProcessor.execute();
-                return true;
             }
-            default -> {
-                QuitProcessor quitProcessor = new QuitProcessor(originalLines, output);
-                quitProcessor.execute();
-            }
+
         }
 
-        return false;
     }
     
 }

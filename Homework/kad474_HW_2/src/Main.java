@@ -1,15 +1,7 @@
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
 
-        if (args.length < 1) {
-            System.out.println("Usage: java Main <input-file>");
-            return;
-        }
-
-        String filename = args[0];
 
         // 1. Load configuration
         OptionReader.readOptions();
@@ -22,11 +14,11 @@ public class Main {
 
         // 3. Inject runtime data (filename)
         if (input instanceof TxtIn txtIn) {
-            txtIn.setFilename(filename);
+            txtIn.setFilename(OptionReader.getString("InputFileName"));
         } 
 
         if (input instanceof CsvIn csvIn) {
-            csvIn.setFilename(filename);
+            csvIn.setFilename(OptionReader.getString("InputFileName"));
         }
 
         if (output instanceof TxtOut txtOut) {
@@ -42,18 +34,15 @@ public class Main {
 
         CommandProcessor commandProcessor = new CommandProcessor(storage, output);
 
-        try (Scanner scanner = new Scanner(System.in)) {
-            System.out.println("\nKWIC System Ready to Process Commands:");
-            while (true) {
-                System.out.print("\n> ");
-                String command = scanner.nextLine();
+        System.out.println("\nKWIC System Processing Command:");
 
-                if (!commandValidator.validateCommand(command)) {
-                    System.out.println("Invalid Command");
-                } else if (!commandProcessor.processCommand(command)) {
-                    break;
-                }
-            }
+        if (!commandValidator.validateCommand(args[0])) {
+            System.out.println("Invalid Command");
+        } else {
+            commandProcessor.processCommand(args);
         }
+        
     }
 }
+    
+

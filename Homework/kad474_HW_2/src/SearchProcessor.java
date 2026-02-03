@@ -3,16 +3,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SearchProcessor extends CommandProcessor {
-    private final String command;
+    private final String keyword;
 
-    public SearchProcessor(LineStorage originalLines, Output output, String command) {
+    public SearchProcessor(LineStorage originalLines, Output output, String keyword) {
         super(originalLines, output);
-        this.command = command;
+        this.keyword = keyword;
     }
 
     public void execute() {
-        String[] parts = parseCommand(command);
-        String keyword = parts[1].toLowerCase();
 
         List<String> foundLines = new ArrayList<>();
 

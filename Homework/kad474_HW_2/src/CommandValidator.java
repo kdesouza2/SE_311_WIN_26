@@ -2,7 +2,7 @@
 import java.util.List;
 
 public class CommandValidator {
-    private static final List<String> VALID_COMMANDS = List.of("kwic", "search", "index", "quit");
+    private static final List<String> VALID_COMMANDS = List.of("kwic-processing", "keyword-search", "index-generation");
 
     public CommandValidator() {
     }

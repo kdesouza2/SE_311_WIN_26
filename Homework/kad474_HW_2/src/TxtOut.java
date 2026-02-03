@@ -1,5 +1,6 @@
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 public class TxtOut implements Output {
@@ -10,11 +11,14 @@ public class TxtOut implements Output {
 
     @Override
     public void printOutput(List<String> lines) {
-        try (FileWriter writer = new FileWriter(filename)) {
+        System.out.println("Writing to: " + filename);
+
+        try (PrintWriter writer = new PrintWriter(new FileWriter(filename))) {
             for (String line : lines) {
-                writer.write(line + System.lineSeparator());
+                writer.println(line);
             }
-        } catch (IOException e) {
+        } catch (IOException ex) {
+            System.out.println("Error saving output");
         }
     }
 
