@@ -1,4 +1,3 @@
-2 sentence(s) found:
+1 sentence(s) found:
 Index  |  Line with Keyword Bolded  | Original Line Index
-1  |  sense [and] sensibility  | 1
-2  |  crouching tiger [and] hidden dragon  | 3
+1  |  crouching tiger and hidden [dragon]  | 3
