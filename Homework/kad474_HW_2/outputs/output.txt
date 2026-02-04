@@ -1,8 +1,4 @@
-architecture, 1
-crouching, 1
-dragon, 1
-hidden, 1
-sense, 1
-sensibility, 1
-software, 1
-tiger, 1
+2 sentence(s) found:
+Index  |  Line with Keyword Bolded  | Original Line Index
+1  |  sense [and] sensibility  | 1
+2  |  crouching tiger [and] hidden dragon  | 3
