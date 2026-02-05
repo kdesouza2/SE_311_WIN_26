@@ -1,8 +1,9 @@
-Design Rule Theory and DSM
-1. Software Product Family
+### Design Rule Theory and DSM
+
+**1. Software Product Family**
     Use Hierarchy
 
-2. Design Structure Matrix (DSM)
+**2. Design Structure Matrix (DSM)**
     Model composite elements
     Model heterogeneous dependencies
     Model various design structures
@@ -10,8 +11,30 @@ Design Rule Theory and DSM
 
 Modular Operator: Splitting
 
+**Software Architecture Style**
+1. Pipes and filters
+    A filter is a program/component
+    A pipe is a way to interconnect two filters 
+    
+    A pipe-and-filter architecture fundamentally assumes linear, stream oriented, stateless (or weakly stateful) data transformation
+    You should NOT use P&F if you have a following system:
+        Highly interative, event-driven systems
+        Systems with strong shared mutable state --> they share a data entity
+        Control-Intensive, Decision-Heavy Systems 
+        Real-Time systems with Hard Deadlines
+        Systems requiring tight component coordination
 
+2. Implicit Invocation
 
-Software Architecture Style
-A filter is a program/component
-A pipe is a way to interconnect two filters 
+3. Layered Systems
+
+4. Blackboard Style
+
+5. Client-server -> cloud computing
+
+6. 2-Tier -> 3-tier
+
+7. Peer-to-Peer
+
+8. Microservice
+
