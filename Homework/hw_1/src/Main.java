@@ -10,7 +10,7 @@ public class Main {
             return;
         }
 
-        String filename = args[0];
+        // String filename = args[0];
         Input input = new TxtIn();
         Output output = new ConsoleOut();
         LineStorage storage = new LineStorage();

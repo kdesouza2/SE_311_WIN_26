@@ -1,7 +1,7 @@
 {
   "@schemaVersion" : "1.0",
   "name" : "structure-dsm",
-  "variables" : [ "src/Alphabetizer.java", "src/AscendingAlphabetizer.java", "src/CommandProcessor.java", "src/CommandValidator.java", "src/ConsoleOut.java", "src/CsvIn.java", "src/DescendingAlphabetizer.java", "src/IndexProcessor.java", "src/Input.java", "src/KWICObjectLoader.java", "src/KWICProcessor.java", "src/LineStorage.java", "src/Main.java", "src/OptionReader.java", "src/Output.java", "src/SearchProcessor.java", "src/TxtIn.java", "src/TxtOut.java" ],
+  "variables" : [ "Alphabetizer.java", "AscendingAlphabetizer.java", "CommandProcessor.java", "CommandValidator.java", "ConsoleOut.java", "CsvIn.java", "DescendingAlphabetizer.java", "IndexProcessor.java", "Input.java", "KWICObjectLoader.java", "KWICProcessor.java", "LineStorage.java", "Main.java", "OptionReader.java", "Output.java", "SearchProcessor.java", "TxtIn.java", "TxtOut.java" ],
   "cells" : [ {
     "src" : 1,
     "dest" : 0,

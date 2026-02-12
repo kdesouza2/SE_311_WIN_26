@@ -2,53 +2,49 @@
   "@schemaVersion" : "1.0",
   "name" : "pkg-clustering",
   "structure" : [ {
-    "@type" : "group",
-    "name" : "src",
-    "nested" : [ {
-      "@type" : "item",
-      "name" : "src/Output.java"
-    }, {
-      "@type" : "item",
-      "name" : "src/LineStorage.java"
-    }, {
-      "@type" : "item",
-      "name" : "src/Alphabetizer.java"
-    }, {
-      "@type" : "item",
-      "name" : "src/AscendingAlphabetizer.java"
-    }, {
-      "@type" : "item",
-      "name" : "src/CommandValidator.java"
-    }, {
-      "@type" : "item",
-      "name" : "src/Input.java"
-    }, {
-      "@type" : "item",
-      "name" : "src/TxtIn.java"
-    }, {
-      "@type" : "item",
-      "name" : "src/ConsoleOut.java"
-    }, {
-      "@type" : "item",
-      "name" : "src/DescendingAlphabetizer.java"
-    }, {
-      "@type" : "item",
-      "name" : "src/Main.java"
-    }, {
-      "@type" : "item",
-      "name" : "src/KWICProcessor.java"
-    }, {
-      "@type" : "item",
-      "name" : "src/SearchProcessor.java"
-    }, {
-      "@type" : "item",
-      "name" : "src/IndexProcessor.java"
-    }, {
-      "@type" : "item",
-      "name" : "src/CommandProcessor.java"
-    }, {
-      "@type" : "item",
-      "name" : "src/QuitProcessor.java"
-    } ]
+    "@type" : "item",
+    "name" : "Output.java"
+  }, {
+    "@type" : "item",
+    "name" : "Alphabetizer.java"
+  }, {
+    "@type" : "item",
+    "name" : "AscendingAlphabetizer.java"
+  }, {
+    "@type" : "item",
+    "name" : "Input.java"
+  }, {
+    "@type" : "item",
+    "name" : "DescendingAlphabetizer.java"
+  }, {
+    "@type" : "item",
+    "name" : "TxtIn.java"
+  }, {
+    "@type" : "item",
+    "name" : "ConsoleOut.java"
+  }, {
+    "@type" : "item",
+    "name" : "CommandValidator.java"
+  }, {
+    "@type" : "item",
+    "name" : "LineStorage.java"
+  }, {
+    "@type" : "item",
+    "name" : "Main.java"
+  }, {
+    "@type" : "item",
+    "name" : "KWICProcessor.java"
+  }, {
+    "@type" : "item",
+    "name" : "IndexProcessor.java"
+  }, {
+    "@type" : "item",
+    "name" : "QuitProcessor.java"
+  }, {
+    "@type" : "item",
+    "name" : "CommandProcessor.java"
+  }, {
+    "@type" : "item",
+    "name" : "SearchProcessor.java"
   } ]
 }

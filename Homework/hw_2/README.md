@@ -1,7 +1,7 @@
 # KWIC Processor
 
 ### How to Run Program
-Navigate to kad474_HW_1_KWIC folder, open terminal and run java -cp out src/Main.java <command> config.properties
+Navigate to hw_2 folder, open terminal and run java -cp out src/Main.java <command> config.properties
 
 ### How to Use Console Commands
 This program accepts 3 commands: "kwic-processing", "index-generation", "keyword-search [keyword]" <br>

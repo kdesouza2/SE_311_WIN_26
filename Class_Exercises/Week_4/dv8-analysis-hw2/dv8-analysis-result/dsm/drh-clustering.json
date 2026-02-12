@@ -9,14 +9,14 @@
       "name" : "L0/M0",
       "nested" : [ {
         "@type" : "item",
-        "name" : "src/Output.java"
+        "name" : "Output.java"
       } ]
     }, {
       "@type" : "group",
       "name" : "L0/M1",
       "nested" : [ {
         "@type" : "item",
-        "name" : "src/Alphabetizer.java"
+        "name" : "Alphabetizer.java"
       } ]
     } ]
   }, {
@@ -33,7 +33,7 @@
           "name" : "L1/M0/L0/M0",
           "nested" : [ {
             "@type" : "item",
-            "name" : "src/Input.java"
+            "name" : "Input.java"
           } ]
         } ]
       }, {
@@ -44,14 +44,14 @@
           "name" : "L1/M0/L1/M0",
           "nested" : [ {
             "@type" : "item",
-            "name" : "src/TxtOut.java"
+            "name" : "TxtOut.java"
           } ]
         }, {
           "@type" : "group",
           "name" : "L1/M0/L1/M1",
           "nested" : [ {
             "@type" : "item",
-            "name" : "src/TxtIn.java"
+            "name" : "TxtIn.java"
           } ]
         }, {
           "@type" : "group",
@@ -64,17 +64,17 @@
               "name" : "L1/M0/L1/M2/L0/M0",
               "nested" : [ {
                 "@type" : "item",
-                "name" : "src/LineStorage.java"
+                "name" : "LineStorage.java"
               } ]
             }, {
               "@type" : "group",
               "name" : "L1/M0/L1/M2/L0/M1",
               "nested" : [ {
                 "@type" : "item",
-                "name" : "src/OptionReader.java"
+                "name" : "OptionReader.java"
               }, {
                 "@type" : "item",
-                "name" : "src/KWICObjectLoader.java"
+                "name" : "KWICObjectLoader.java"
               } ]
             } ]
           }, {
@@ -85,21 +85,21 @@
               "name" : "L1/M0/L1/M2/L1/M0",
               "nested" : [ {
                 "@type" : "item",
-                "name" : "src/SearchProcessor.java"
+                "name" : "SearchProcessor.java"
               } ]
             }, {
               "@type" : "group",
               "name" : "L1/M0/L1/M2/L1/M1",
               "nested" : [ {
                 "@type" : "item",
-                "name" : "src/KWICProcessor.java"
+                "name" : "KWICProcessor.java"
               } ]
             }, {
               "@type" : "group",
               "name" : "L1/M0/L1/M2/L1/M2",
               "nested" : [ {
                 "@type" : "item",
-                "name" : "src/IndexProcessor.java"
+                "name" : "IndexProcessor.java"
               } ]
             } ]
           }, {
@@ -107,7 +107,7 @@
             "name" : "L1/M0/L1/M2/Control",
             "nested" : [ {
               "@type" : "item",
-              "name" : "src/CommandProcessor.java"
+              "name" : "CommandProcessor.java"
             } ]
           } ]
         }, {
@@ -115,14 +115,14 @@
           "name" : "L1/M0/L1/M3",
           "nested" : [ {
             "@type" : "item",
-            "name" : "src/CommandValidator.java"
+            "name" : "CommandValidator.java"
           } ]
         }, {
           "@type" : "group",
           "name" : "L1/M0/L1/M4",
           "nested" : [ {
             "@type" : "item",
-            "name" : "src/CsvIn.java"
+            "name" : "CsvIn.java"
           } ]
         } ]
       }, {
@@ -130,7 +130,7 @@
         "name" : "L1/M0/Control",
         "nested" : [ {
           "@type" : "item",
-          "name" : "src/Main.java"
+          "name" : "Main.java"
         } ]
       } ]
     }, {
@@ -138,21 +138,21 @@
       "name" : "L1/M1",
       "nested" : [ {
         "@type" : "item",
-        "name" : "src/DescendingAlphabetizer.java"
+        "name" : "DescendingAlphabetizer.java"
       } ]
     }, {
       "@type" : "group",
       "name" : "L1/M2",
       "nested" : [ {
         "@type" : "item",
-        "name" : "src/ConsoleOut.java"
+        "name" : "ConsoleOut.java"
       } ]
     }, {
       "@type" : "group",
       "name" : "L1/M3",
       "nested" : [ {
         "@type" : "item",
-        "name" : "src/AscendingAlphabetizer.java"
+        "name" : "AscendingAlphabetizer.java"
       } ]
     } ]
   } ]

@@ -9,7 +9,7 @@
       "name" : "L0/M0",
       "nested" : [ {
         "@type" : "item",
-        "name" : "src/Alphabetizer.java"
+        "name" : "Alphabetizer.java"
       } ]
     } ]
   }, {
@@ -26,7 +26,7 @@
           "name" : "L1/M0/L0/M0",
           "nested" : [ {
             "@type" : "item",
-            "name" : "src/Output.java"
+            "name" : "Output.java"
           } ]
         } ]
       }, {
@@ -37,10 +37,10 @@
           "name" : "L1/M0/L1/M0",
           "nested" : [ {
             "@type" : "item",
-            "name" : "src/TxtIn.java"
+            "name" : "TxtIn.java"
           }, {
             "@type" : "item",
-            "name" : "src/Input.java"
+            "name" : "Input.java"
           } ]
         }, {
           "@type" : "group",
@@ -53,7 +53,7 @@
               "name" : "L1/M0/L1/M1/L0/M0",
               "nested" : [ {
                 "@type" : "item",
-                "name" : "src/LineStorage.java"
+                "name" : "LineStorage.java"
               } ]
             } ]
           }, {
@@ -64,31 +64,31 @@
               "name" : "L1/M0/L1/M1/L1/M0",
               "nested" : [ {
                 "@type" : "item",
-                "name" : "src/SearchProcessor.java"
+                "name" : "SearchProcessor.java"
               } ]
             }, {
               "@type" : "group",
               "name" : "L1/M0/L1/M1/L1/M1",
               "nested" : [ {
                 "@type" : "item",
-                "name" : "src/QuitProcessor.java"
+                "name" : "QuitProcessor.java"
               } ]
             }, {
               "@type" : "group",
               "name" : "L1/M0/L1/M1/L1/M2",
               "nested" : [ {
                 "@type" : "item",
-                "name" : "src/KWICProcessor.java"
+                "name" : "KWICProcessor.java"
               }, {
                 "@type" : "item",
-                "name" : "src/AscendingAlphabetizer.java"
+                "name" : "AscendingAlphabetizer.java"
               } ]
             }, {
               "@type" : "group",
               "name" : "L1/M0/L1/M1/L1/M3",
               "nested" : [ {
                 "@type" : "item",
-                "name" : "src/IndexProcessor.java"
+                "name" : "IndexProcessor.java"
               } ]
             } ]
           }, {
@@ -96,7 +96,7 @@
             "name" : "L1/M0/L1/M1/Control",
             "nested" : [ {
               "@type" : "item",
-              "name" : "src/CommandProcessor.java"
+              "name" : "CommandProcessor.java"
             } ]
           } ]
         }, {
@@ -104,14 +104,14 @@
           "name" : "L1/M0/L1/M2",
           "nested" : [ {
             "@type" : "item",
-            "name" : "src/ConsoleOut.java"
+            "name" : "ConsoleOut.java"
           } ]
         }, {
           "@type" : "group",
           "name" : "L1/M0/L1/M3",
           "nested" : [ {
             "@type" : "item",
-            "name" : "src/CommandValidator.java"
+            "name" : "CommandValidator.java"
           } ]
         } ]
       }, {
@@ -119,7 +119,7 @@
         "name" : "L1/M0/Control",
         "nested" : [ {
           "@type" : "item",
-          "name" : "src/Main.java"
+          "name" : "Main.java"
         } ]
       } ]
     }, {
@@ -127,7 +127,7 @@
       "name" : "L1/M1",
       "nested" : [ {
         "@type" : "item",
-        "name" : "src/DescendingAlphabetizer.java"
+        "name" : "DescendingAlphabetizer.java"
       } ]
     } ]
   } ]

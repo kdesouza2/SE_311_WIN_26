@@ -1,7 +1,7 @@
 {
   "@schemaVersion" : "1.0",
   "name" : "structure-dsm",
-  "variables" : [ "src/Alphabetizer.java", "src/AscendingAlphabetizer.java", "src/CommandProcessor.java", "src/CommandValidator.java", "src/ConsoleOut.java", "src/DescendingAlphabetizer.java", "src/IndexProcessor.java", "src/Input.java", "src/KWICProcessor.java", "src/LineStorage.java", "src/Main.java", "src/Output.java", "src/QuitProcessor.java", "src/SearchProcessor.java", "src/TxtIn.java" ],
+  "variables" : [ "Alphabetizer.java", "AscendingAlphabetizer.java", "CommandProcessor.java", "CommandValidator.java", "ConsoleOut.java", "DescendingAlphabetizer.java", "IndexProcessor.java", "Input.java", "KWICProcessor.java", "LineStorage.java", "Main.java", "Output.java", "QuitProcessor.java", "SearchProcessor.java", "TxtIn.java" ],
   "cells" : [ {
     "src" : 1,
     "dest" : 0,
@@ -136,8 +136,8 @@
     "dest" : 3,
     "values" : {
       "Contain" : 1.0,
-      "Create" : 1.0,
-      "Call" : 2.0
+      "Call" : 2.0,
+      "Create" : 1.0
     }
   }, {
     "src" : 10,
@@ -165,7 +165,6 @@
     "src" : 10,
     "dest" : 11,
     "values" : {
-      "Call" : 1.0,
       "Contain" : 1.0
     }
   }, {
@@ -179,7 +178,6 @@
     "src" : 12,
     "dest" : 2,
     "values" : {
-      "Use" : 1.0,
       "Call" : 1.0,
       "Extend" : 1.0
     }
@@ -193,14 +191,13 @@
     "src" : 12,
     "dest" : 11,
     "values" : {
-      "Call" : 1.0,
       "Parameter" : 1.0
     }
   }, {
     "src" : 13,
     "dest" : 2,
     "values" : {
-      "Use" : 6.0,
+      "Use" : 3.0,
       "Call" : 2.0,
       "Extend" : 1.0
     }
@@ -215,7 +212,7 @@
     "src" : 13,
     "dest" : 11,
     "values" : {
-      "Call" : 4.0,
+      "Call" : 1.0,
       "Parameter" : 1.0
     }
   }, {
