@@ -1,4 +1,5 @@
-package homework.hw_1.src;
+package homework.hw_3.src;
+
 import java.util.ArrayList;
 import java.util.List;
 
