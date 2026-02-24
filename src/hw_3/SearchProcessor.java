@@ -6,12 +6,12 @@ import java.util.List;
 public class SearchProcessor extends CommandProcessor {
     private final String keyword;
 
-    public SearchProcessor(LineStorage originalLines, Output output, String keyword) {
-        super(originalLines, output);
+    public SearchProcessor(LineStorage originalLines, String keyword) {
+        super(originalLines);
         this.keyword = keyword;
     }
 
-    public void execute() {
+    public List<String> execute() {
 
         List<String> foundLines = new ArrayList<>();
 
@@ -30,7 +30,7 @@ public class SearchProcessor extends CommandProcessor {
             foundLines.add(1, "Index  |  Line with Keyword Bolded  | Original Line Index");
         }
 
-        output.printOutput(foundLines);
+        return foundLines;
 
     }
 

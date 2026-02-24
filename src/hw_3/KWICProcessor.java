@@ -6,8 +6,8 @@ import java.util.List;
 public class KWICProcessor extends CommandProcessor {
     private final LineStorage kwic;
 
-    public KWICProcessor (LineStorage originalLines, Output output) {
-        super(originalLines, output);
+    public KWICProcessor (LineStorage originalLines) {
+        super(originalLines);
         this.kwic = new LineStorage();
     }
 
@@ -59,13 +59,13 @@ public class KWICProcessor extends CommandProcessor {
         return circularLines;
     }
 
-    public void execute(){
+    public List<String> execute(){
         
         if (kwic.isEmpty()) {
             createKWICTable();
         }
 
-        output.printOutput(kwic.getLines());
+        return kwic.getLines();
     }
     
 }

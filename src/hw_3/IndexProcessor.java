@@ -8,10 +8,14 @@ import java.util.TreeMap;
 public class IndexProcessor extends CommandProcessor {
     private final Map<String, Integer> index;
 
-    public IndexProcessor (LineStorage originalLines, Output output) {
-        super(originalLines, output);
+    public IndexProcessor (LineStorage originalLines) {
+        super(originalLines);
         this.index = new TreeMap<>();
     }
+
+    private String[] parseCommand(String command) {
+		return command.split(" ");
+	}
 
     private void createIndex() {
         List<String> keywords = new ArrayList<>();
@@ -43,7 +47,7 @@ public class IndexProcessor extends CommandProcessor {
         }
     }
     
-    public void execute() {
+    public List<String> execute() {
         if (index.isEmpty()) {
             createIndex();
         }
@@ -60,7 +64,7 @@ public class IndexProcessor extends CommandProcessor {
             table.add(sb.toString());
         }
 
-        output.printOutput(table);
+        return table;
 
     }
 

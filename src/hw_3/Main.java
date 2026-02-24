@@ -1,49 +1,66 @@
 package src.hw_3;
+
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
-
 
         // 1. Load configuration
         OptionReader.readOptions();
 
         // 2. Create objects from config
-        String typeOfInput = OptionReader.getString("Input");
-        Input input = (Input) OptionReader.getObjectFromKey(typeOfInput);
-        String typeOfOutput = OptionReader.getString("Output");
-        Output output = (Output) OptionReader.getObjectFromKey(typeOfOutput);
+        Input input = (Input) OptionReader.getObjectFromKey(
+                OptionReader.getString("Input"));
 
-        // 3. Inject runtime data (filename)
-        if (input instanceof TxtIn txtIn) {
-            txtIn.setFilename(OptionReader.getString("InputFileName"));
-        } 
+        Output output = (Output) OptionReader.getObjectFromKey(
+                OptionReader.getString("Output"));
 
-        if (input instanceof CsvIn csvIn) {
-            csvIn.setFilename(OptionReader.getString("InputFileName"));
+        // 3. Inject runtime data (filenames)
+        switch (input) {
+            case TxtIn txtIn -> txtIn.setFilename(
+                    OptionReader.getString("InputFileName"));
+            case CsvIn csvIn -> csvIn.setFilename(
+                    OptionReader.getString("InputFileName"));
+            default -> {
+            }
         }
 
         if (output instanceof TxtOut txtOut) {
-            String outputFile = OptionReader.getString("OutputFileName");
-            txtOut.setFilename(outputFile);
+            txtOut.setFilename(
+                    OptionReader.getString("OutputFileName"));
         }
 
         LineStorage storage = new LineStorage();
-        CommandValidator commandValidator = new CommandValidator();
-
-        // store original lines
         storage.setLines(input.readLines());
 
-        CommandProcessor commandProcessor = new CommandProcessor(storage, output);
+        // 4. Validate command
+        CommandValidator commandValidator = new CommandValidator();
 
-        System.out.println("\nKWIC System Processing Command:");
+        System.out.println("\nKWIC Client Sending Command:");
 
-        if (!commandValidator.validateCommand(args[0])) {
+        if (args.length == 0 || !commandValidator.validateCommand(args[0])) {
             System.out.println("Invalid Command");
-        } else {
-            commandProcessor.processCommand(args);
+            return;
         }
-        
+
+        // 5. Send command to server
+        KWICClient client = new KWICClient();
+        KWICServer server = new KWICServer(storage);
+
+        try {
+            server.startServer();
+
+            client.connect();   // open socket
+
+            List<String> response = client.sendCommand(args);
+
+            output.printOutput(response);
+
+            client.disconnect();
+
+        } catch (Exception e) {
+            System.out.println("Server communication failed.");
+        }
     }
 }
-    
-
