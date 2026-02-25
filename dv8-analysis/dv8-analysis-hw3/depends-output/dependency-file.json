@@ -1,0 +1,2493 @@
+{
+  "schemaVersion" : "1.0",
+  "name" : "dependency-file-sdsm",
+  "variables" : [ "client/ConsoleOut.java", "client/KWICClient.java", "client/Output.java", "client/SocketConnection.java", "client/TxtOut.java", "server/Alphabetizer.java", "server/AscendingAlphabetizer.java", "server/ClientHandler.java", "server/CommandProcessor.java", "server/CommandValidator.java", "server/CsvIn.java", "server/DescendingAlphabetizer.java", "server/IndexProcessor.java", "server/Input.java", "server/KWICObjectLoader.java", "server/KWICProcessor.java", "server/KWICServer.java", "server/LineStorage.java", "server/Main.java", "server/OptionReader.java", "server/SearchProcessor.java", "server/TxtIn.java" ],
+  "cells" : [ {
+    "src" : 1,
+    "dest" : 3,
+    "values" : {
+      "Call" : 5.0,
+      "Use" : 1.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.client.KWICClient.connect",
+        "file" : "client/KWICClient.java",
+        "type" : "function",
+        "lineNumber" : 16
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.SocketConnection",
+        "file" : "client/SocketConnection.java",
+        "type" : "type",
+        "lineNumber" : 9
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.client.KWICClient.connect",
+        "file" : "client/KWICClient.java",
+        "type" : "function",
+        "lineNumber" : 17
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.SocketConnection.open",
+        "file" : "client/SocketConnection.java",
+        "type" : "function",
+        "lineNumber" : 31
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.client.KWICClient.sendCommand",
+        "file" : "client/KWICClient.java",
+        "type" : "function",
+        "lineNumber" : 23
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.SocketConnection.sendCommand",
+        "file" : "client/SocketConnection.java",
+        "type" : "function",
+        "lineNumber" : 71
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.client.KWICClient.receiveResults",
+        "file" : "client/KWICClient.java",
+        "type" : "function",
+        "lineNumber" : 31
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.SocketConnection.readLine",
+        "file" : "client/SocketConnection.java",
+        "type" : "function",
+        "lineNumber" : 105
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.client.KWICClient.disconnect",
+        "file" : "client/KWICClient.java",
+        "type" : "function",
+        "lineNumber" : 44
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.SocketConnection.close",
+        "file" : "client/SocketConnection.java",
+        "type" : "function",
+        "lineNumber" : 94
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.client.KWICClient.connect",
+        "file" : "client/KWICClient.java",
+        "type" : "function",
+        "lineNumber" : 16
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.SocketConnection",
+        "file" : "client/SocketConnection.java",
+        "type" : "type",
+        "lineNumber" : 9
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.client.KWICClient.connect",
+        "file" : "client/KWICClient.java",
+        "type" : "function",
+        "lineNumber" : 16
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.SocketConnection",
+        "file" : "client/SocketConnection.java",
+        "type" : "type",
+        "lineNumber" : 9
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.client.KWICClient",
+        "file" : "client/KWICClient.java",
+        "type" : "type",
+        "lineNumber" : 10
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.SocketConnection",
+        "file" : "client/SocketConnection.java",
+        "type" : "type",
+        "lineNumber" : 9
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 6,
+    "dest" : 5,
+    "values" : {
+      "Implement" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.AscendingAlphabetizer",
+        "file" : "server/AscendingAlphabetizer.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.Alphabetizer",
+        "file" : "server/Alphabetizer.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Implement"
+    } ]
+  }, {
+    "src" : 21,
+    "dest" : 13,
+    "values" : {
+      "Implement" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.TxtIn",
+        "file" : "server/TxtIn.java",
+        "type" : "type",
+        "lineNumber" : 9
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.Input",
+        "file" : "server/Input.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Implement"
+    } ]
+  }, {
+    "src" : 18,
+    "dest" : 9,
+    "values" : {
+      "Call" : 3.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 59
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandValidator",
+        "file" : "server/CommandValidator.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 98
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandValidator.validateCommand",
+        "file" : "server/CommandValidator.java",
+        "type" : "function",
+        "lineNumber" : 11
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 135
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandValidator.validateCommand",
+        "file" : "server/CommandValidator.java",
+        "type" : "function",
+        "lineNumber" : 11
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 59
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandValidator",
+        "file" : "server/CommandValidator.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 59
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandValidator",
+        "file" : "server/CommandValidator.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 18,
+    "dest" : 8,
+    "values" : {
+      "Call" : 2.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 140
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandProcessor",
+        "file" : "server/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 141
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandProcessor.processCommand",
+        "file" : "server/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 13
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 140
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandProcessor",
+        "file" : "server/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 140
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandProcessor",
+        "file" : "server/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 18,
+    "dest" : 10,
+    "values" : {
+      "Cast" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 42
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CsvIn",
+        "file" : "server/CsvIn.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Cast"
+    } ]
+  }, {
+    "src" : 7,
+    "dest" : 17,
+    "values" : {
+      "Parameter" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.ClientHandler.ClientHandler",
+        "file" : "server/ClientHandler.java",
+        "type" : "function",
+        "lineNumber" : 15
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage",
+        "file" : "server/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Parameter"
+    } ]
+  }, {
+    "src" : 10,
+    "dest" : 13,
+    "values" : {
+      "Implement" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.CsvIn",
+        "file" : "server/CsvIn.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.Input",
+        "file" : "server/Input.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Implement"
+    } ]
+  }, {
+    "src" : 12,
+    "dest" : 8,
+    "values" : {
+      "Call" : 1.0,
+      "Extend" : 1.0,
+      "Use" : 2.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.IndexProcessor.IndexProcessor",
+        "file" : "server/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 12
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandProcessor",
+        "file" : "server/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.IndexProcessor",
+        "file" : "server/IndexProcessor.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandProcessor",
+        "file" : "server/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Extend"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.IndexProcessor.createIndex",
+        "file" : "server/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 28
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandProcessor.originalLines",
+        "file" : "server/CommandProcessor.java",
+        "type" : "var",
+        "lineNumber" : 6
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.IndexProcessor.createIndex",
+        "file" : "server/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 39
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandProcessor.originalLines",
+        "file" : "server/CommandProcessor.java",
+        "type" : "var",
+        "lineNumber" : 6
+      },
+      "type" : "Use"
+    } ]
+  }, {
+    "src" : 18,
+    "dest" : 13,
+    "values" : {
+      "Cast" : 1.0,
+      "Call" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 33
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.Input",
+        "file" : "server/Input.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Cast"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 57
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.Input.readLines",
+        "file" : "server/Input.java",
+        "type" : "function",
+        "lineNumber" : 7
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 33
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.Input",
+        "file" : "server/Input.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 18,
+    "dest" : 16,
+    "values" : {
+      "Call" : 3.0,
+      "Create" : 1.0,
+      "Use" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 68
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.KWICServer",
+        "file" : "server/KWICServer.java",
+        "type" : "type",
+        "lineNumber" : 10
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 91
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.KWICServer.stopServer",
+        "file" : "server/KWICServer.java",
+        "type" : "function",
+        "lineNumber" : 48
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 107
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.KWICServer.getLog",
+        "file" : "server/KWICServer.java",
+        "type" : "function",
+        "lineNumber" : 59
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 68
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.KWICServer",
+        "file" : "server/KWICServer.java",
+        "type" : "type",
+        "lineNumber" : 10
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 69
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.KWICServer",
+        "file" : "server/KWICServer.java",
+        "type" : "type",
+        "lineNumber" : 10
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 68
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.KWICServer",
+        "file" : "server/KWICServer.java",
+        "type" : "type",
+        "lineNumber" : 10
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 18,
+    "dest" : 17,
+    "values" : {
+      "Call" : 2.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 56
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage",
+        "file" : "server/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 57
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage.setLines",
+        "file" : "server/LineStorage.java",
+        "type" : "function",
+        "lineNumber" : 17
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 56
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage",
+        "file" : "server/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 56
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage",
+        "file" : "server/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 7,
+    "dest" : 8,
+    "values" : {
+      "Call" : 2.0,
+      "Use" : 1.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.ClientHandler.ClientHandler",
+        "file" : "server/ClientHandler.java",
+        "type" : "function",
+        "lineNumber" : 17
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandProcessor",
+        "file" : "server/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.ClientHandler.run",
+        "file" : "server/ClientHandler.java",
+        "type" : "function",
+        "lineNumber" : 36
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandProcessor.processCommand",
+        "file" : "server/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 13
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.ClientHandler.ClientHandler",
+        "file" : "server/ClientHandler.java",
+        "type" : "function",
+        "lineNumber" : 17
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandProcessor",
+        "file" : "server/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.ClientHandler.ClientHandler",
+        "file" : "server/ClientHandler.java",
+        "type" : "function",
+        "lineNumber" : 17
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandProcessor",
+        "file" : "server/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.ClientHandler",
+        "file" : "server/ClientHandler.java",
+        "type" : "type",
+        "lineNumber" : 11
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandProcessor",
+        "file" : "server/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 18,
+    "dest" : 19,
+    "values" : {
+      "Call" : 11.0,
+      "Use" : 11.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 30
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader.readOptions",
+        "file" : "server/OptionReader.java",
+        "type" : "function",
+        "lineNumber" : 15
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 32
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader.getString",
+        "file" : "server/OptionReader.java",
+        "type" : "function",
+        "lineNumber" : 44
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 33
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader.getObjectFromKey",
+        "file" : "server/OptionReader.java",
+        "type" : "function",
+        "lineNumber" : 32
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 35
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader.getString",
+        "file" : "server/OptionReader.java",
+        "type" : "function",
+        "lineNumber" : 44
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 36
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader.getObjectFromKey",
+        "file" : "server/OptionReader.java",
+        "type" : "function",
+        "lineNumber" : 32
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 39
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader.getString",
+        "file" : "server/OptionReader.java",
+        "type" : "function",
+        "lineNumber" : 44
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 43
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader.getString",
+        "file" : "server/OptionReader.java",
+        "type" : "function",
+        "lineNumber" : 44
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 47
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader.getString",
+        "file" : "server/OptionReader.java",
+        "type" : "function",
+        "lineNumber" : 44
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 50
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader.getObjectFromKey",
+        "file" : "server/OptionReader.java",
+        "type" : "function",
+        "lineNumber" : 32
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 50
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader.getString",
+        "file" : "server/OptionReader.java",
+        "type" : "function",
+        "lineNumber" : 44
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 51
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader.getString",
+        "file" : "server/OptionReader.java",
+        "type" : "function",
+        "lineNumber" : 44
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 30
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader",
+        "file" : "server/OptionReader.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 32
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader",
+        "file" : "server/OptionReader.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 33
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader",
+        "file" : "server/OptionReader.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 35
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader",
+        "file" : "server/OptionReader.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 36
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader",
+        "file" : "server/OptionReader.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 39
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader",
+        "file" : "server/OptionReader.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 43
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader",
+        "file" : "server/OptionReader.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 47
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader",
+        "file" : "server/OptionReader.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 50
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader",
+        "file" : "server/OptionReader.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 50
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader",
+        "file" : "server/OptionReader.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 51
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader",
+        "file" : "server/OptionReader.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Use"
+    } ]
+  }, {
+    "src" : 7,
+    "dest" : 3,
+    "values" : {
+      "Call" : 4.0,
+      "Import" : 1.0,
+      "Use" : 1.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.ClientHandler.ClientHandler",
+        "file" : "server/ClientHandler.java",
+        "type" : "function",
+        "lineNumber" : 16
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.SocketConnection",
+        "file" : "client/SocketConnection.java",
+        "type" : "type",
+        "lineNumber" : 9
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.ClientHandler.run",
+        "file" : "server/ClientHandler.java",
+        "type" : "function",
+        "lineNumber" : 26
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.SocketConnection.receiveCommand",
+        "file" : "client/SocketConnection.java",
+        "type" : "function",
+        "lineNumber" : 61
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.ClientHandler.run",
+        "file" : "server/ClientHandler.java",
+        "type" : "function",
+        "lineNumber" : 29
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.SocketConnection.sendResults",
+        "file" : "client/SocketConnection.java",
+        "type" : "function",
+        "lineNumber" : 53
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.ClientHandler.run",
+        "file" : "server/ClientHandler.java",
+        "type" : "function",
+        "lineNumber" : 42
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.SocketConnection.sendResults",
+        "file" : "client/SocketConnection.java",
+        "type" : "function",
+        "lineNumber" : 53
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "server/ClientHandler.java",
+        "file" : "server/ClientHandler.java",
+        "type" : "file",
+        "lineNumber" : 0
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.SocketConnection",
+        "file" : "client/SocketConnection.java",
+        "type" : "type",
+        "lineNumber" : 9
+      },
+      "type" : "Import"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.ClientHandler.ClientHandler",
+        "file" : "server/ClientHandler.java",
+        "type" : "function",
+        "lineNumber" : 16
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.SocketConnection",
+        "file" : "client/SocketConnection.java",
+        "type" : "type",
+        "lineNumber" : 9
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.ClientHandler.ClientHandler",
+        "file" : "server/ClientHandler.java",
+        "type" : "function",
+        "lineNumber" : 16
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.SocketConnection",
+        "file" : "client/SocketConnection.java",
+        "type" : "type",
+        "lineNumber" : 9
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.ClientHandler",
+        "file" : "server/ClientHandler.java",
+        "type" : "type",
+        "lineNumber" : 10
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.SocketConnection",
+        "file" : "client/SocketConnection.java",
+        "type" : "type",
+        "lineNumber" : 9
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 11,
+    "dest" : 5,
+    "values" : {
+      "Implement" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.DescendingAlphabetizer",
+        "file" : "server/DescendingAlphabetizer.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.Alphabetizer",
+        "file" : "server/Alphabetizer.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Implement"
+    } ]
+  }, {
+    "src" : 8,
+    "dest" : 17,
+    "values" : {
+      "Use" : 1.0,
+      "Parameter" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.CommandProcessor.CommandProcessor",
+        "file" : "server/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 10
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage",
+        "file" : "server/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.CommandProcessor.CommandProcessor",
+        "file" : "server/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 9
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage",
+        "file" : "server/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Parameter"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.CommandProcessor",
+        "file" : "server/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage",
+        "file" : "server/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 20,
+    "dest" : 8,
+    "values" : {
+      "Call" : 1.0,
+      "Extend" : 1.0,
+      "Use" : 2.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.SearchProcessor.SearchProcessor",
+        "file" : "server/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 10
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandProcessor",
+        "file" : "server/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.SearchProcessor",
+        "file" : "server/SearchProcessor.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandProcessor",
+        "file" : "server/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Extend"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.SearchProcessor.execute",
+        "file" : "server/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 19
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandProcessor.originalLines",
+        "file" : "server/CommandProcessor.java",
+        "type" : "var",
+        "lineNumber" : 6
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.SearchProcessor.execute",
+        "file" : "server/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 21
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandProcessor.originalLines",
+        "file" : "server/CommandProcessor.java",
+        "type" : "var",
+        "lineNumber" : 6
+      },
+      "type" : "Use"
+    } ]
+  }, {
+    "src" : 8,
+    "dest" : 15,
+    "values" : {
+      "Call" : 2.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.CommandProcessor.processCommand",
+        "file" : "server/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 20
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.KWICProcessor",
+        "file" : "server/KWICProcessor.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.CommandProcessor.processCommand",
+        "file" : "server/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 22
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.KWICProcessor.execute",
+        "file" : "server/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 62
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.CommandProcessor.processCommand",
+        "file" : "server/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 20
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.KWICProcessor",
+        "file" : "server/KWICProcessor.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.CommandProcessor.processCommand",
+        "file" : "server/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 20
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.KWICProcessor",
+        "file" : "server/KWICProcessor.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 16,
+    "dest" : 7,
+    "values" : {
+      "Call" : 1.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.KWICServer.startServer",
+        "file" : "server/KWICServer.java",
+        "type" : "function",
+        "lineNumber" : 34
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.ClientHandler",
+        "file" : "server/ClientHandler.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.KWICServer.startServer",
+        "file" : "server/KWICServer.java",
+        "type" : "function",
+        "lineNumber" : 34
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.ClientHandler",
+        "file" : "server/ClientHandler.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.KWICServer.startServer",
+        "file" : "server/KWICServer.java",
+        "type" : "function",
+        "lineNumber" : 34
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.ClientHandler",
+        "file" : "server/ClientHandler.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 8,
+    "dest" : 12,
+    "values" : {
+      "Call" : 2.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.CommandProcessor.processCommand",
+        "file" : "server/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 37
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.IndexProcessor",
+        "file" : "server/IndexProcessor.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.CommandProcessor.processCommand",
+        "file" : "server/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 39
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.IndexProcessor.execute",
+        "file" : "server/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 50
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.CommandProcessor.processCommand",
+        "file" : "server/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 37
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.IndexProcessor",
+        "file" : "server/IndexProcessor.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.CommandProcessor.processCommand",
+        "file" : "server/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 37
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.IndexProcessor",
+        "file" : "server/IndexProcessor.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 15,
+    "dest" : 8,
+    "values" : {
+      "Call" : 1.0,
+      "Extend" : 1.0,
+      "Use" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.KWICProcessor.KWICProcessor",
+        "file" : "server/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 10
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandProcessor",
+        "file" : "server/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.KWICProcessor",
+        "file" : "server/KWICProcessor.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandProcessor",
+        "file" : "server/CommandProcessor.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Extend"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.KWICProcessor.createKWICTable",
+        "file" : "server/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 18
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.CommandProcessor.originalLines",
+        "file" : "server/CommandProcessor.java",
+        "type" : "var",
+        "lineNumber" : 6
+      },
+      "type" : "Use"
+    } ]
+  }, {
+    "src" : 18,
+    "dest" : 21,
+    "values" : {
+      "Cast" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 38
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.TxtIn",
+        "file" : "server/TxtIn.java",
+        "type" : "type",
+        "lineNumber" : 9
+      },
+      "type" : "Cast"
+    } ]
+  }, {
+    "src" : 15,
+    "dest" : 5,
+    "values" : {
+      "Cast" : 1.0,
+      "Call" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.KWICProcessor.alphabetize",
+        "file" : "server/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 34
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.Alphabetizer",
+        "file" : "server/Alphabetizer.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Cast"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.KWICProcessor.alphabetize",
+        "file" : "server/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 36
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.Alphabetizer.sort",
+        "file" : "server/Alphabetizer.java",
+        "type" : "function",
+        "lineNumber" : 7
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.KWICProcessor.alphabetize",
+        "file" : "server/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 34
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.Alphabetizer",
+        "file" : "server/Alphabetizer.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 20,
+    "dest" : 17,
+    "values" : {
+      "Call" : 2.0,
+      "Parameter" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.SearchProcessor.execute",
+        "file" : "server/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 19
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage.getLines",
+        "file" : "server/LineStorage.java",
+        "type" : "function",
+        "lineNumber" : 13
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.SearchProcessor.execute",
+        "file" : "server/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 21
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage.getLines",
+        "file" : "server/LineStorage.java",
+        "type" : "function",
+        "lineNumber" : 13
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.SearchProcessor.SearchProcessor",
+        "file" : "server/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 9
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage",
+        "file" : "server/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Parameter"
+    } ]
+  }, {
+    "src" : 12,
+    "dest" : 17,
+    "values" : {
+      "Call" : 2.0,
+      "Parameter" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.IndexProcessor.createIndex",
+        "file" : "server/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 28
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage.getLines",
+        "file" : "server/LineStorage.java",
+        "type" : "function",
+        "lineNumber" : 13
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.IndexProcessor.createIndex",
+        "file" : "server/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 39
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage.getLines",
+        "file" : "server/LineStorage.java",
+        "type" : "function",
+        "lineNumber" : 13
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.IndexProcessor.IndexProcessor",
+        "file" : "server/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 11
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage",
+        "file" : "server/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Parameter"
+    } ]
+  }, {
+    "src" : 15,
+    "dest" : 17,
+    "values" : {
+      "Call" : 6.0,
+      "Use" : 1.0,
+      "Create" : 1.0,
+      "Parameter" : 2.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.KWICProcessor.KWICProcessor",
+        "file" : "server/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 11
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage",
+        "file" : "server/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.KWICProcessor.createKWICTable",
+        "file" : "server/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 28
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage.setLines",
+        "file" : "server/LineStorage.java",
+        "type" : "function",
+        "lineNumber" : 17
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.KWICProcessor.circularShift",
+        "file" : "server/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 42
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage.getLines",
+        "file" : "server/LineStorage.java",
+        "type" : "function",
+        "lineNumber" : 13
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.KWICProcessor.circularShift",
+        "file" : "server/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 55
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage.getLines",
+        "file" : "server/LineStorage.java",
+        "type" : "function",
+        "lineNumber" : 13
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.KWICProcessor.execute",
+        "file" : "server/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 64
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage.isEmpty",
+        "file" : "server/LineStorage.java",
+        "type" : "function",
+        "lineNumber" : 21
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.KWICProcessor.execute",
+        "file" : "server/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 68
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage.getLines",
+        "file" : "server/LineStorage.java",
+        "type" : "function",
+        "lineNumber" : 13
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.KWICProcessor.KWICProcessor",
+        "file" : "server/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 11
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage",
+        "file" : "server/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.KWICProcessor.KWICProcessor",
+        "file" : "server/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 11
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage",
+        "file" : "server/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.KWICProcessor.KWICProcessor",
+        "file" : "server/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 9
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage",
+        "file" : "server/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Parameter"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.KWICProcessor.circularShift",
+        "file" : "server/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 39
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage",
+        "file" : "server/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Parameter"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.KWICProcessor",
+        "file" : "server/KWICProcessor.java",
+        "type" : "type",
+        "lineNumber" : 7
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage",
+        "file" : "server/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 15,
+    "dest" : 19,
+    "values" : {
+      "Call" : 2.0,
+      "Use" : 2.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.KWICProcessor.alphabetize",
+        "file" : "server/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 33
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader.getString",
+        "file" : "server/OptionReader.java",
+        "type" : "function",
+        "lineNumber" : 44
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.KWICProcessor.alphabetize",
+        "file" : "server/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 34
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader.getObjectFromKey",
+        "file" : "server/OptionReader.java",
+        "type" : "function",
+        "lineNumber" : 32
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.KWICProcessor.alphabetize",
+        "file" : "server/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 33
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader",
+        "file" : "server/OptionReader.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.KWICProcessor.alphabetize",
+        "file" : "server/KWICProcessor.java",
+        "type" : "function",
+        "lineNumber" : 34
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader",
+        "file" : "server/OptionReader.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Use"
+    } ]
+  }, {
+    "src" : 12,
+    "dest" : 19,
+    "values" : {
+      "Call" : 2.0,
+      "Use" : 2.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.IndexProcessor.createIndex",
+        "file" : "server/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 24
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader.getString",
+        "file" : "server/OptionReader.java",
+        "type" : "function",
+        "lineNumber" : 44
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.IndexProcessor.createIndex",
+        "file" : "server/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 25
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader.getString",
+        "file" : "server/OptionReader.java",
+        "type" : "function",
+        "lineNumber" : 44
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.IndexProcessor.createIndex",
+        "file" : "server/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 24
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader",
+        "file" : "server/OptionReader.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.IndexProcessor.createIndex",
+        "file" : "server/IndexProcessor.java",
+        "type" : "function",
+        "lineNumber" : 25
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.OptionReader",
+        "file" : "server/OptionReader.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Use"
+    } ]
+  }, {
+    "src" : 16,
+    "dest" : 17,
+    "values" : {
+      "Use" : 1.0,
+      "Parameter" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.KWICServer.KWICServer",
+        "file" : "server/KWICServer.java",
+        "type" : "function",
+        "lineNumber" : 22
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage",
+        "file" : "server/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Use"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.KWICServer.KWICServer",
+        "file" : "server/KWICServer.java",
+        "type" : "function",
+        "lineNumber" : 21
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage",
+        "file" : "server/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Parameter"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.KWICServer",
+        "file" : "server/KWICServer.java",
+        "type" : "type",
+        "lineNumber" : 17
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.LineStorage",
+        "file" : "server/LineStorage.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 4,
+    "dest" : 2,
+    "values" : {
+      "Implement" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.client.TxtOut",
+        "file" : "client/TxtOut.java",
+        "type" : "type",
+        "lineNumber" : 7
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.Output",
+        "file" : "client/Output.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Implement"
+    } ]
+  }, {
+    "src" : 18,
+    "dest" : 4,
+    "values" : {
+      "Cast" : 2.0,
+      "Call" : 2.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 46
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.TxtOut",
+        "file" : "client/TxtOut.java",
+        "type" : "type",
+        "lineNumber" : 7
+      },
+      "type" : "Cast"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 50
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.TxtOut",
+        "file" : "client/TxtOut.java",
+        "type" : "type",
+        "lineNumber" : 7
+      },
+      "type" : "Cast"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 51
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.TxtOut.setFilename",
+        "file" : "client/TxtOut.java",
+        "type" : "function",
+        "lineNumber" : 26
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 107
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.TxtOut.printOutput",
+        "file" : "client/TxtOut.java",
+        "type" : "function",
+        "lineNumber" : 14
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 50
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.TxtOut",
+        "file" : "client/TxtOut.java",
+        "type" : "type",
+        "lineNumber" : 7
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 8,
+    "dest" : 20,
+    "values" : {
+      "Call" : 2.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.CommandProcessor.processCommand",
+        "file" : "server/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 31
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.SearchProcessor",
+        "file" : "server/SearchProcessor.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.CommandProcessor.processCommand",
+        "file" : "server/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 33
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.SearchProcessor.execute",
+        "file" : "server/SearchProcessor.java",
+        "type" : "function",
+        "lineNumber" : 14
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.CommandProcessor.processCommand",
+        "file" : "server/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 31
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.SearchProcessor",
+        "file" : "server/SearchProcessor.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.CommandProcessor.processCommand",
+        "file" : "server/CommandProcessor.java",
+        "type" : "function",
+        "lineNumber" : 31
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.SearchProcessor",
+        "file" : "server/SearchProcessor.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 18,
+    "dest" : 2,
+    "values" : {
+      "Cast" : 1.0,
+      "Call" : 2.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 36
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.Output",
+        "file" : "client/Output.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Cast"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 106
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.Output.printOutput",
+        "file" : "client/Output.java",
+        "type" : "function",
+        "lineNumber" : 7
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 142
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.Output.printOutput",
+        "file" : "client/Output.java",
+        "type" : "function",
+        "lineNumber" : 7
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 36
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.Output",
+        "file" : "client/Output.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 19,
+    "dest" : 14,
+    "values" : {
+      "Call" : 3.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.OptionReader",
+        "file" : "server/OptionReader.java",
+        "type" : "type",
+        "lineNumber" : 10
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.KWICObjectLoader",
+        "file" : "server/KWICObjectLoader.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.OptionReader.getObjectFromKey",
+        "file" : "server/OptionReader.java",
+        "type" : "function",
+        "lineNumber" : 35
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.KWICObjectLoader.loadObject",
+        "file" : "server/KWICObjectLoader.java",
+        "type" : "function",
+        "lineNumber" : 13
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.OptionReader.getObjectFromStr",
+        "file" : "server/OptionReader.java",
+        "type" : "function",
+        "lineNumber" : 41
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.KWICObjectLoader.loadObject",
+        "file" : "server/KWICObjectLoader.java",
+        "type" : "function",
+        "lineNumber" : 13
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.OptionReader",
+        "file" : "server/OptionReader.java",
+        "type" : "type",
+        "lineNumber" : 10
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.KWICObjectLoader",
+        "file" : "server/KWICObjectLoader.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.OptionReader",
+        "file" : "server/OptionReader.java",
+        "type" : "type",
+        "lineNumber" : 10
+      },
+      "dest" : {
+        "object" : "src.hw_3.server.KWICObjectLoader",
+        "file" : "server/KWICObjectLoader.java",
+        "type" : "type",
+        "lineNumber" : 6
+      },
+      "type" : "Contain"
+    } ]
+  }, {
+    "src" : 0,
+    "dest" : 2,
+    "values" : {
+      "Implement" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.client.ConsoleOut",
+        "file" : "client/ConsoleOut.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.Output",
+        "file" : "client/Output.java",
+        "type" : "type",
+        "lineNumber" : 5
+      },
+      "type" : "Implement"
+    } ]
+  }, {
+    "src" : 18,
+    "dest" : 1,
+    "values" : {
+      "Call" : 5.0,
+      "Create" : 1.0,
+      "Contain" : 1.0
+    },
+    "details" : [ {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 74
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.KWICClient",
+        "file" : "client/KWICClient.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 75
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.KWICClient.connect",
+        "file" : "client/KWICClient.java",
+        "type" : "function",
+        "lineNumber" : 15
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 88
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.KWICClient.sendCommand",
+        "file" : "client/KWICClient.java",
+        "type" : "function",
+        "lineNumber" : 20
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 104
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.KWICClient.sendCommand",
+        "file" : "client/KWICClient.java",
+        "type" : "function",
+        "lineNumber" : 20
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 106
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.KWICClient.receiveResults",
+        "file" : "client/KWICClient.java",
+        "type" : "function",
+        "lineNumber" : 27
+      },
+      "type" : "Call"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 74
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.KWICClient",
+        "file" : "client/KWICClient.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Create"
+    }, {
+      "src" : {
+        "object" : "src.hw_3.server.Main.main",
+        "file" : "server/Main.java",
+        "type" : "function",
+        "lineNumber" : 74
+      },
+      "dest" : {
+        "object" : "src.hw_3.client.KWICClient",
+        "file" : "client/KWICClient.java",
+        "type" : "type",
+        "lineNumber" : 8
+      },
+      "type" : "Contain"
+    } ]
+  } ]
+}

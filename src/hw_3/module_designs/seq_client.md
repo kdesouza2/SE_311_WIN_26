@@ -11,7 +11,6 @@ User -> Main: enter keyword / command
 Main -> KWICClient: sendCommand(command)
 KWICClient -> SocketConnection: sendCommand(command)
 SocketConnection -> SocketConnection: transmit over socket
-SocketConnection --> KWICClient: ACK (optional)
 KWICClient -> SocketConnection: receiveResults()
 SocketConnection --> KWICClient: List<String> response (return)
 KWICClient --> Main: List<String> response

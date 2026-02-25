@@ -1,0 +1,183 @@
+{
+  "@schemaVersion" : "1.0",
+  "name" : "drh-clustering",
+  "structure" : [ {
+    "@type" : "group",
+    "name" : "L0",
+    "nested" : [ {
+      "@type" : "group",
+      "name" : "L0/M0",
+      "nested" : [ {
+        "@type" : "item",
+        "name" : "server/Alphabetizer.java"
+      } ]
+    }, {
+      "@type" : "group",
+      "name" : "L0/M1",
+      "nested" : [ {
+        "@type" : "item",
+        "name" : "client/Output.java"
+      } ]
+    } ]
+  }, {
+    "@type" : "group",
+    "name" : "L1",
+    "nested" : [ {
+      "@type" : "group",
+      "name" : "L1/M0",
+      "nested" : [ {
+        "@type" : "group",
+        "name" : "L1/M0/L0",
+        "nested" : [ {
+          "@type" : "group",
+          "name" : "L1/M0/L0/M0",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "server/Input.java"
+          } ]
+        }, {
+          "@type" : "group",
+          "name" : "L1/M0/L0/M1",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "client/SocketConnection.java"
+          } ]
+        } ]
+      }, {
+        "@type" : "group",
+        "name" : "L1/M0/L1",
+        "nested" : [ {
+          "@type" : "group",
+          "name" : "L1/M0/L1/M0",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "server/TxtIn.java"
+          } ]
+        }, {
+          "@type" : "group",
+          "name" : "L1/M0/L1/M1",
+          "nested" : [ {
+            "@type" : "group",
+            "name" : "L1/M0/L1/M1/L0",
+            "nested" : [ {
+              "@type" : "group",
+              "name" : "L1/M0/L1/M1/L0/M0",
+              "nested" : [ {
+                "@type" : "item",
+                "name" : "server/LineStorage.java"
+              } ]
+            }, {
+              "@type" : "group",
+              "name" : "L1/M0/L1/M1/L0/M1",
+              "nested" : [ {
+                "@type" : "item",
+                "name" : "server/OptionReader.java"
+              }, {
+                "@type" : "item",
+                "name" : "server/KWICObjectLoader.java"
+              } ]
+            } ]
+          }, {
+            "@type" : "group",
+            "name" : "L1/M0/L1/M1/L1",
+            "nested" : [ {
+              "@type" : "group",
+              "name" : "L1/M0/L1/M1/L1/M0",
+              "nested" : [ {
+                "@type" : "item",
+                "name" : "server/SearchProcessor.java"
+              } ]
+            }, {
+              "@type" : "group",
+              "name" : "L1/M0/L1/M1/L1/M1",
+              "nested" : [ {
+                "@type" : "item",
+                "name" : "server/KWICServer.java"
+              }, {
+                "@type" : "item",
+                "name" : "server/ClientHandler.java"
+              } ]
+            }, {
+              "@type" : "group",
+              "name" : "L1/M0/L1/M1/L1/M2",
+              "nested" : [ {
+                "@type" : "item",
+                "name" : "server/KWICProcessor.java"
+              } ]
+            }, {
+              "@type" : "group",
+              "name" : "L1/M0/L1/M1/L1/M3",
+              "nested" : [ {
+                "@type" : "item",
+                "name" : "server/IndexProcessor.java"
+              } ]
+            } ]
+          }, {
+            "@type" : "group",
+            "name" : "L1/M0/L1/M1/Control",
+            "nested" : [ {
+              "@type" : "item",
+              "name" : "server/CommandProcessor.java"
+            } ]
+          } ]
+        }, {
+          "@type" : "group",
+          "name" : "L1/M0/L1/M2",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "server/CsvIn.java"
+          } ]
+        }, {
+          "@type" : "group",
+          "name" : "L1/M0/L1/M3",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "client/TxtOut.java"
+          } ]
+        }, {
+          "@type" : "group",
+          "name" : "L1/M0/L1/M4",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "server/CommandValidator.java"
+          } ]
+        }, {
+          "@type" : "group",
+          "name" : "L1/M0/L1/M5",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "client/KWICClient.java"
+          } ]
+        } ]
+      }, {
+        "@type" : "group",
+        "name" : "L1/M0/Control",
+        "nested" : [ {
+          "@type" : "item",
+          "name" : "server/Main.java"
+        } ]
+      } ]
+    }, {
+      "@type" : "group",
+      "name" : "L1/M1",
+      "nested" : [ {
+        "@type" : "item",
+        "name" : "server/AscendingAlphabetizer.java"
+      } ]
+    }, {
+      "@type" : "group",
+      "name" : "L1/M2",
+      "nested" : [ {
+        "@type" : "item",
+        "name" : "server/DescendingAlphabetizer.java"
+      } ]
+    }, {
+      "@type" : "group",
+      "name" : "L1/M3",
+      "nested" : [ {
+        "@type" : "item",
+        "name" : "client/ConsoleOut.java"
+      } ]
+    } ]
+  } ]
+}

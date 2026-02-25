@@ -17,7 +17,6 @@ CommandProcessor -> SearchProcessor: execute()
 SearchProcessor --> CommandProcessor: List<String> searchResults
 CommandProcessor --> ClientHandler: List<String> processedResults
 ClientHandler -> SocketConnection: sendResults(List<String>)
-SocketConnection --> ClientHandler: ACK (optional)
 ClientHandler --> KWICServer: done (thread ends)
 ClientHandler --> Client: List<String> response
 @enduml

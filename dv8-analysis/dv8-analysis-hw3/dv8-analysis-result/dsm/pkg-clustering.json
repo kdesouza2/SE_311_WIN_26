@@ -1,0 +1,79 @@
+{
+  "@schemaVersion" : "1.0",
+  "name" : "pkg-clustering",
+  "structure" : [ {
+    "@type" : "group",
+    "name" : "client",
+    "nested" : [ {
+      "@type" : "item",
+      "name" : "client/Output.java"
+    }, {
+      "@type" : "item",
+      "name" : "client/SocketConnection.java"
+    }, {
+      "@type" : "item",
+      "name" : "client/TxtOut.java"
+    }, {
+      "@type" : "item",
+      "name" : "client/ConsoleOut.java"
+    }, {
+      "@type" : "item",
+      "name" : "client/KWICClient.java"
+    } ]
+  }, {
+    "@type" : "group",
+    "name" : "server",
+    "nested" : [ {
+      "@type" : "item",
+      "name" : "server/Alphabetizer.java"
+    }, {
+      "@type" : "item",
+      "name" : "server/DescendingAlphabetizer.java"
+    }, {
+      "@type" : "item",
+      "name" : "server/AscendingAlphabetizer.java"
+    }, {
+      "@type" : "item",
+      "name" : "server/CommandValidator.java"
+    }, {
+      "@type" : "item",
+      "name" : "server/KWICObjectLoader.java"
+    }, {
+      "@type" : "item",
+      "name" : "server/OptionReader.java"
+    }, {
+      "@type" : "item",
+      "name" : "server/Input.java"
+    }, {
+      "@type" : "item",
+      "name" : "server/TxtIn.java"
+    }, {
+      "@type" : "item",
+      "name" : "server/CsvIn.java"
+    }, {
+      "@type" : "item",
+      "name" : "server/LineStorage.java"
+    }, {
+      "@type" : "item",
+      "name" : "server/KWICProcessor.java"
+    }, {
+      "@type" : "item",
+      "name" : "server/IndexProcessor.java"
+    }, {
+      "@type" : "item",
+      "name" : "server/CommandProcessor.java"
+    }, {
+      "@type" : "item",
+      "name" : "server/SearchProcessor.java"
+    }, {
+      "@type" : "item",
+      "name" : "server/ClientHandler.java"
+    }, {
+      "@type" : "item",
+      "name" : "server/KWICServer.java"
+    }, {
+      "@type" : "item",
+      "name" : "server/Main.java"
+    } ]
+  } ]
+}
