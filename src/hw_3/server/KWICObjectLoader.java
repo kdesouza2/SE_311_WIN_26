@@ -5,30 +5,33 @@ import java.lang.reflect.InvocationTargetException;
 
 public class KWICObjectLoader extends ClassLoader {
 
-	public Object loadObject(String className) {
-     
-        try {
-            // Create a new ClassLoader 
-            ClassLoader loader = this.getClass().getClassLoader();
-		
-            // Load the target class using its name
-            Class<?> aClass = loader.loadClass(className);
+    private static final String[] PACKAGE_PREFIXES = {
+        "src.hw_3.server.",
+        "src.hw_3.client."
+    };
 
-            // Create a new instance from the loaded class
-            Constructor<?> constructor = aClass.getConstructor();
-            Object obj = constructor.newInstance();
+    public Object loadObject(String className) {
 
-            //return the instance
-            return obj;
+        for (String prefix : PACKAGE_PREFIXES) {
+            String fullName = prefix + className;
 
-		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-            throw new RuntimeException("Failed to create instance of: " + className, e);
-		} catch (ClassNotFoundException e) {
-			throw new RuntimeException("Class not found: " + className, e);
-		} catch (NoSuchMethodException | SecurityException e) {
-            throw new RuntimeException("No default constructor for: " + className, e);
-		}
+            try {
+                ClassLoader loader = this.getClass().getClassLoader();
+                Class<?> aClass = loader.loadClass(fullName);
 
-	}
+                Constructor<?> constructor = aClass.getConstructor();
+                return constructor.newInstance();
 
+            } catch (ClassNotFoundException e) {
+                // Try next package
+            } catch (InstantiationException | IllegalAccessException |
+                     IllegalArgumentException | InvocationTargetException |
+                     NoSuchMethodException | SecurityException e) {
+                throw new RuntimeException("Failed to create instance of: " + fullName, e);
+            }
+        }
+
+        throw new RuntimeException("Class not found in server or client packages: " + className);
+    }
 }
+

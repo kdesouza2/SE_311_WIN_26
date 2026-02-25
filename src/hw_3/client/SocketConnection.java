@@ -54,7 +54,7 @@ public class SocketConnection {
         for (String line : message) {
             out.println(line);
         }
-        out.println("END_MESSAGE"); // signal end of message
+        out.println("END"); // signal end of message
     }
 
     // Receives a single command line from client
@@ -78,7 +78,7 @@ public class SocketConnection {
         try {
             String line;
             while ((line = in.readLine()) != null) {
-                if (line.equals("END_MESSAGE")) {
+                if (line.equals("END")) {
                     break;
                 }
                 results.add(line);
@@ -95,10 +95,15 @@ public class SocketConnection {
         try {
             if (socket != null && !socket.isClosed()) {
                 socket.close();
-                System.out.println("Socket connection closed.");
+                // System.out.println("Socket connection closed.");
             }
         } catch (IOException e) {
             throw new RuntimeException("Failed to close socket connection.", e);
         }
     }
+
+    public String readLine() throws IOException {
+        return in.readLine();
+    }
+    
 }

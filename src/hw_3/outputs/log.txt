@@ -1,0 +1,2 @@
+Total requests: 4
+Successful requests: 3

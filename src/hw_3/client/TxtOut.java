@@ -12,7 +12,7 @@ public class TxtOut implements Output {
 
     @Override
     public void printOutput(List<String> lines) {
-        System.out.println("Writing to: " + filename);
+        // System.out.println("Writing to: " + filename);
 
         try (PrintWriter writer = new PrintWriter(new FileWriter(filename))) {
             for (String line : lines) {

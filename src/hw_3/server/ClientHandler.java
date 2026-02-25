@@ -22,33 +22,28 @@ public class ClientHandler implements Runnable {
     @Override
     public void run() {
         try {
-            // Receive command from client
-            String commandLine = connection.receiveCommand();
-            System.out.println("Received command: " + commandLine);
+            while (true) {
+                String commandLine = connection.receiveCommand();
+                if (commandLine == null) break;              // client disconnected
+                if (commandLine.equalsIgnoreCase("quit")) {  // client wants to stop
+                    connection.sendResults(List.of("Goodbye."));
+                    break;
+                }
 
-            // Split into args
-            String[] args = commandLine.split(" ");
+                String[] args = commandLine.split(" ");
+                totalRequests.incrementAndGet();
 
-            // Increment total requests
-            totalRequests.incrementAndGet();
+                List<String> response = processor.processCommand(args);
 
-            // Process command (returns List<String>)
-            List<String> response = processor.processCommand(args);
+                if (!response.isEmpty() && !response.get(0).toLowerCase().contains("not found")) {
+                    successfulRequests.incrementAndGet();
+                }
 
-            // Check if the search was successful (not empty or "not found")
-            if (!response.isEmpty() && !response.get(0).toLowerCase().contains("not found")) {
-                successfulRequests.incrementAndGet();
+                connection.sendResults(response);  // sends results + END
             }
-
-            // Send results back to client
-            connection.sendResults(response);
-
         } catch (Exception e) {
             System.out.println("Error handling client: " + e.getMessage());
-        } finally {
-            // Always close connection
-            connection.close();
-            System.out.println("Client disconnected.");
         }
     }
+
 }
