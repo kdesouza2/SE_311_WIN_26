@@ -1,8 +1,10 @@
+package hw_4.calculator_client;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class BasicCalculator extends JFrame implements ActionListener {
+public class Calculator extends JFrame implements ActionListener {
 
     private final JTextField display;
 
@@ -10,7 +12,7 @@ public class BasicCalculator extends JFrame implements ActionListener {
     private String operator = "";
     private boolean startNewNumber = true;
 
-    public BasicCalculator() {
+    public Calculator() {
 
         setTitle("Calculator");
         setSize(300, 400);
@@ -101,9 +103,5 @@ public class BasicCalculator extends JFrame implements ActionListener {
             operator = "";
             startNewNumber = true;
         }
-    }
-
-    public static void main(String[] args) {
-        new BasicCalculator();
     }
 }

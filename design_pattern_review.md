@@ -170,3 +170,97 @@ Building a custom sandwich by choosing bread, fillings, and sauces.
 ![Builder UML](https://reactiveprogramming.io/_next/image?url=%2Fbooks%2Fpatterns%2Fimg%2Fpatterns-articles%2Fbuilder-diagram.png&w=3840&q=75)
 
 ---
+
+## 14. State Pattern
+
+**Description**
+The State pattern allows an object to change its behavior when its internal state changes. Instead of writing large if or switch statements, each state is represented by a separate class.
+
+The object delegates behavior to the current state object, and when the state changes, the behavior changes automatically.
+
+Think of it like the object acting differently depending on its mood or condition.
+
+**Real-life Example:**
+A traffic light behaves differently depending on its state.
+
+States:
+
+Red
+
+Green
+
+Yellow
+
+Behavior:
+
+Red → cars must stop
+
+Green → cars can go
+
+Yellow → prepare to stop
+
+TrafficLight
+    |
+    |---- RedState
+    |---- GreenState
+    |---- YellowState
+
+**UML Diagram**
+![State UML](https://reactiveprogramming.io/_next/image?url=%2Fbooks%2Fpatterns%2Fimg%2Fpatterns-articles%2Fstate-diagram.png&w=3840&q=75)
+
+---
+
+## 15. Composite Pattern
+
+**Description**
+The Composite pattern allows you to treat individual objects and groups of objects the same way.
+
+It creates a tree structure where objects can contain other objects.
+
+This is useful when working with hierarchies.
+
+**Real-life Example:**
+Your computer's file system is a perfect example.
+
+Folder
+   ├── File
+   ├── File
+   └── Folder
+         ├── File
+         └── File
+
+**UML Diagram**
+![Composite UML](https://i0.wp.com/cdn-images-1.medium.com/max/883/1*bdfkZUoLWy6kxdHDuidQIg.png?w=800&ssl=1)
+
+---
+
+## 16. Visitor Pattern
+
+**Description**
+The Visitor pattern allows you to add new operations to existing objects without changing their classes.
+
+Instead of putting operations inside the object, you put them in a visitor class.
+
+The visitor "visits" each object and performs an operation.
+
+**Real-life Example:**
+Imagine different types of items:
+
+Food
+
+Electronics
+
+Clothing
+
+Each item might have different tax rules.
+
+Instead of putting tax logic inside every class, you create a TaxVisitor.
+
+TaxVisitor
+    |
+    |---- visit(Food)
+    |---- visit(Electronics)
+    |---- visit(Clothing)
+
+**UML Diagram**
+![Visitor UML](https://i0.wp.com/cdn-images-1.medium.com/max/883/1*UCUgFrV7S_mP47zDqXjvNw.png?w=800&ssl=1)
