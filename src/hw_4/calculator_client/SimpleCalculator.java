@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class Calculator extends JFrame implements ActionListener {
+public class SimpleCalculator extends JFrame implements ActionListener {
 
     private final JTextField display;
 
@@ -12,7 +12,7 @@ public class Calculator extends JFrame implements ActionListener {
     private String operator = "";
     private boolean startNewNumber = true;
 
-    public Calculator() {
+    public SimpleCalculator() {
 
         setTitle("Calculator");
         setSize(300, 400);
