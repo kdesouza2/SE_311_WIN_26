@@ -1,9 +1,9 @@
 package src.hw_4.calculator_server;
 
-import src.hw_4.calculator_client.expression.AtomExpr;
-import src.hw_4.calculator_client.expression.AddSubExpr;
-import src.hw_4.calculator_client.expression.MultDivExpr;
-import src.hw_4.calculator_client.visitor.ExpressionVisitor;
+import src.hw_4.expression.AddSubExpr;
+import src.hw_4.expression.AtomExpr;
+import src.hw_4.expression.MultDivExpr;
+import src.hw_4.visitor.ExpressionVisitor;
 
 public class ValidationVisitor implements ExpressionVisitor {
 

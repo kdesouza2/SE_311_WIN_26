@@ -1,4 +1,6 @@
-package src.hw_4.calculator_client.expression;
+package src.hw_4.expression;
+
+import src.hw_4.visitor.ExpressionVisitor;
 
 public class AtomExpr implements Expression {
 
@@ -8,8 +10,7 @@ public class AtomExpr implements Expression {
         this.value = value;
     }
 
-    @Override
-    public double evaluate() {
-        return value;
+    public void accept(ExpressionVisitor visitor) {
+        visitor.visit(this);
     }
 }

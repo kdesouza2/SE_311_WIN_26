@@ -1,4 +1,4 @@
-package src.hw_4.calculator_client.state;
+package src.hw_4.state;
 
 import src.hw_4.calculator_client.SimpleCalculator;
 

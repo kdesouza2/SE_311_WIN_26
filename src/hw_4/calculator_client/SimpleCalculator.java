@@ -3,10 +3,10 @@ package src.hw_4.calculator_client;
 import java.util.ArrayList;
 import java.util.List;
 
-import src.hw_4.calculator_client.state.CalculatorState;
-import src.hw_4.calculator_client.state.StartState;
-import src.hw_4.calculator_client.expression.*;
-import src.hw_4.calculator_client.visitor.*;
+import src.hw_4.visitor.*;
+import src.hw_4.expression.*;
+import src.hw_4.state.CalculatorState;
+import src.hw_4.state.StartState;
 
 public class SimpleCalculator {
 

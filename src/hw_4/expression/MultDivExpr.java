@@ -1,6 +1,6 @@
-package src.hw_4.calculator_client.expression;
+package src.hw_4.expression;
 
-import src.hw_4.calculator_client.visitor.ExpressionVisitor;
+import src.hw_4.visitor.ExpressionVisitor;
 
 public class MultDivExpr implements Expression {
 
