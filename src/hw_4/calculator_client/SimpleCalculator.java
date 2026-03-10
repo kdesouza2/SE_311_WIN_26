@@ -1,107 +1,125 @@
-package hw_4.calculator_client;
+package src.hw_4.calculator_client;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
 
-public class SimpleCalculator extends JFrame implements ActionListener {
+import src.hw_4.calculator_client.state.CalculatorState;
+import src.hw_4.calculator_client.state.StartState;
+import src.hw_4.calculator_client.expression.*;
+import src.hw_4.calculator_client.visitor.*;
 
-    private final JTextField display;
+public class SimpleCalculator {
 
-    private double firstNumber = 0;
-    private String operator = "";
-    private boolean startNewNumber = true;
+    private CalculatorState currentState;
+
+    private Expression currentExpression;   // root of expression tree
+    private String operator;
+
+    private String display = "";
+
+    private final List<CalculatorObserver> observers = new ArrayList<>();
+
 
     public SimpleCalculator() {
-
-        setTitle("Calculator");
-        setSize(300, 400);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
-        setLayout(new BorderLayout(10, 10));
-
-        // ===== Add Padding Around Entire Frame =====
-        ((JComponent) getContentPane()).setBorder(
-                BorderFactory.createEmptyBorder(15, 15, 15, 15)
-        );
-
-        // ===== Display Panel =====
-        display = new JTextField();
-        display.setFont(new Font("Arial", Font.BOLD, 24));
-        display.setHorizontalAlignment(JTextField.RIGHT);
-        display.setEditable(false);
-        display.setBackground(Color.WHITE);
-        display.setPreferredSize(new Dimension(0, 60));
-        add(display, BorderLayout.NORTH);
-
-        // ===== Button Panel =====
-        JPanel buttonPanel = new JPanel();
-        buttonPanel.setLayout(new GridLayout(4, 4, 10, 10));
-        buttonPanel.setBackground(new Color(230, 240, 250)); // Light background panel
-
-        String[] buttons = {
-                "1", "2", "3", "+",
-                "4", "5", "6", "-",
-                "7", "8", "9", "*",
-                "0", "=", "C", "/"
-        };
-
-        for (String text : buttons) {
-            JButton button = new JButton(text);
-            button.setFont(new Font("Arial", Font.BOLD, 18));
-
-            // ===== Button Styling =====
-            button.setBackground(new Color(173, 216, 230)); // Light blue
-            button.setFocusPainted(false);
-
-            button.addActionListener(this);
-            buttonPanel.add(button);
-        }
-
-        add(buttonPanel, BorderLayout.CENTER);
-
-        setVisible(true);
+        currentState = new StartState();
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        String command = e.getActionCommand();
 
-        if (command.matches("[0-9]")) {
-            if (startNewNumber) {
-                display.setText(command);
-                startNewNumber = false;
-            } else {
-                display.setText(display.getText() + command);
-            }
+    public void processInput(String input) {
+        currentState.handleInput(this, input);
+    }
+
+
+    public void setState(CalculatorState state) {
+        this.currentState = state;
+    }
+
+
+    public void setDisplay(String text) {
+        display = text;
+    }
+
+
+    public void appendDisplay(String text) {
+        display += text;
+    }
+
+
+    public String getDisplay() {
+        return display;
+    }
+
+
+    /* CREATE ATOM FROM DISPLAY */
+    public void createAtom() {
+        double value = Double.parseDouble(display);
+        Expression atom = new AtomExpr(value);
+
+        if (currentExpression == null) {
+            currentExpression = atom;
+        } else {
+            buildExpression(atom);
         }
 
-        else if (command.matches("[+\\-*/]")) {
-            firstNumber = Double.parseDouble(display.getText());
-            operator = command;
-            startNewNumber = true;
+        display = "";
+    }
+
+
+    public void setOperator(String op) {
+        operator = op;
+    }
+
+
+    /* BUILD TREE NODE */
+    private void buildExpression(Expression right) {
+
+        if (operator.equals("+") || operator.equals("-")) {
+            currentExpression = new AddSubExpr(currentExpression, right, operator);
         }
 
-        else if (command.equals("=")) {
-            double secondNumber = Double.parseDouble(display.getText());
-            double result = 0;
+        else if (operator.equals("*") || operator.equals("/")) {
+            currentExpression = new MultDivExpr(currentExpression, right, operator);
+        }
+    }
 
-            switch (operator) {
-                case "+" -> result = firstNumber + secondNumber;
-                case "-" -> result = firstNumber - secondNumber;
-                case "*" -> result = firstNumber * secondNumber;
-                case "/" -> result = (secondNumber != 0) ? firstNumber / secondNumber : 0;
-            }
 
-            display.setText(String.valueOf(result));
-            startNewNumber = true;
+    /* VISITOR CALCULATION */
+    public void calculate() {
+
+        if (display.length() > 0) {
+            createAtom();
         }
 
-        else if (command.equals("C")) {
-            display.setText("");
-            firstNumber = 0;
-            operator = "";
-            startNewNumber = true;
+        EvaluationVisitor visitor = new EvaluationVisitor();
+        currentExpression.accept(visitor);
+
+        double result = visitor.getResult();
+
+        display = String.valueOf(result);
+
+        notifyObservers(currentExpression.toString() + " = " + result);
+
+        currentExpression = null;
+    }
+
+
+    /* CLEAR */
+    public void clear() {
+        display = "";
+        operator = "";
+        currentExpression = null;
+    }
+
+
+    /* OBSERVER METHODS */
+
+    public void addObserver(CalculatorObserver obs) {
+        observers.add(obs);
+    }
+
+    public void notifyObservers(String expr) {
+        for (CalculatorObserver obs : observers) {
+            obs.update(expr);
         }
     }
 }
