@@ -4,9 +4,9 @@ import src.hw_4.visitor.ExpressionVisitor;
 
 public class MultDivExpr implements Expression {
 
-    private Expression left;
-    private Expression right;
-    private String operator;
+    private final Expression left;
+    private final Expression right;
+    private final String operator;
 
     public MultDivExpr(Expression left, Expression right, String operator) {
         this.left = left;

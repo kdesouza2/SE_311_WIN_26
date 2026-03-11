@@ -6,7 +6,7 @@ import javax.swing.*;
 
 public class CalculatorClient extends JFrame implements ActionListener {
 
-    private JTextField display;
+    private final JTextField display;
     private boolean startNewNumber = true;
 
     private final SimpleCalculator calculator;

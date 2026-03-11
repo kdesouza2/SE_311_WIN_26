@@ -5,8 +5,8 @@ import src.hw_4.visitor.ExpressionVisitor;
 public class AddSubExpr implements Expression {
 
     private final Expression left;
-    private final Expression right;
-    private String operator;
+    private Expression right;
+    private final String operator;
 
     public AddSubExpr(Expression left, Expression right, String operator) {
         this.left = left;
@@ -29,5 +29,10 @@ public class AddSubExpr implements Expression {
     @Override
     public void accept(ExpressionVisitor visitor) {
         visitor.visit(this);
+    }
+
+    
+    public void setRight(Expression expr) {
+        this.right = expr;
     }
 }

@@ -8,7 +8,7 @@ public class GettingAddSubOperandState implements CalculatorState {
     public void handleInput(SimpleCalculator calculator, String input) {
 
         if (input.matches("[0-9]")) {
-            calculator.appendToDisplay(input);
+            calculator.appendDisplay(input);
         }
 
         else if (input.equals("+") || input.equals("-")) {
