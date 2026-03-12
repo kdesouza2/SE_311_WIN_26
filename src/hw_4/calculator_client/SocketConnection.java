@@ -9,7 +9,7 @@ public class SocketConnection implements CalculatorObserver {
     private PrintWriter writer;
     private BufferedReader reader;
 
-    /* CLIENT-SIDE CONSTRUCTOR */
+    // Client-side constructor
     public SocketConnection(String host, int port) {
         try {
             socket = new Socket(host, port);
@@ -18,7 +18,7 @@ public class SocketConnection implements CalculatorObserver {
         }
     }
 
-    /* SERVER-SIDE CONSTRUCTOR */
+    // Server-side constructor
     public SocketConnection(Socket socket) {
         this.socket = socket;
         initializeStreams();
@@ -26,7 +26,7 @@ public class SocketConnection implements CalculatorObserver {
 
     private void initializeStreams() {
         try {
-            writer = new PrintWriter(socket.getOutputStream(), true);
+            writer = new PrintWriter(socket.getOutputStream(), true); // auto-flush
             reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         } catch (IOException e) {
         }
@@ -40,15 +40,26 @@ public class SocketConnection implements CalculatorObserver {
     private void sendToServer(String expression) {
         if (writer != null) {
             writer.println(expression);
+            System.out.println("Sent to server: " + expression);
+        } else {
+            System.err.println("Writer not initialized. Cannot send: " + expression);
         }
     }
 
-    // THIS IS THE COMPLETION OF getReader()
     public BufferedReader getReader() {
         return reader;
     }
 
     public PrintWriter getWriter() {
         return writer;
+    }
+
+    public void close() {
+        try {
+            if (writer != null) writer.close();
+            if (reader != null) reader.close();
+            if (socket != null && !socket.isClosed()) socket.close();
+        } catch (IOException e) {
+        }
     }
 }

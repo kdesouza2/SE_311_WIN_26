@@ -35,4 +35,9 @@ public class AddSubExpr implements Expression {
     public void setRight(Expression expr) {
         this.right = expr;
     }
+
+    @Override
+    public String toString() {
+        return "(" + left.toString() + " " + operator + " " + right.toString() + ")";
+    }
 }

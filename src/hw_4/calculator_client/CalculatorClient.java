@@ -7,13 +7,11 @@ import javax.swing.*;
 public class CalculatorClient extends JFrame implements ActionListener {
 
     private final JTextField display;
-    private boolean startNewNumber = true;
-
     private final SimpleCalculator calculator;
 
-    public CalculatorClient() {
+    public CalculatorClient(SimpleCalculator calculator) {
 
-        calculator = new SimpleCalculator();
+        this.calculator = calculator;
 
         setTitle("Calculator");
         setSize(300, 400);
@@ -64,6 +62,5 @@ public class CalculatorClient extends JFrame implements ActionListener {
         calculator.processInput(command);
 
         display.setText(calculator.getDisplay());
-
     }
 }

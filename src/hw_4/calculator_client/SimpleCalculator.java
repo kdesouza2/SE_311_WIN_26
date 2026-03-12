@@ -110,20 +110,19 @@ public class SimpleCalculator {
 
     /* VISITOR CALCULATION */
     public void calculate() {
-
         if (display.length() > 0) {
             createAtom();
         }
-
+    
         EvaluationVisitor visitor = new EvaluationVisitor();
         currentExpression.accept(visitor);
-
         double result = visitor.getResult();
-
+    
         display = String.valueOf(result);
-
+    
+        // Send expression to server
         notifyObservers(currentExpression.toString() + " = " + result);
-
+    
         currentExpression = null;
     }
 

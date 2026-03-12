@@ -30,4 +30,9 @@ public class MultDivExpr implements Expression {
     public void accept(ExpressionVisitor visitor) {
         visitor.visit(this);
     }
+
+    @Override
+    public String toString() {
+        return "(" + left.toString() + " " + operator + " " + right.toString() + ")";
+    }
 }
