@@ -41,7 +41,6 @@ public class CalculatorServer {
 
         } catch (IOException e) {
         } finally {
-            System.out.println("Server shutting down.");
         }
     }
 
@@ -72,7 +71,6 @@ public class CalculatorServer {
 
     public void writeSummary() {
         if (successfulEquations.isEmpty()) {
-            System.out.println("No equations received. Summary not written.");
             return;
         }
 

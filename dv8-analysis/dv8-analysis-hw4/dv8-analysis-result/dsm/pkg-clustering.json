@@ -1,0 +1,88 @@
+{
+  "@schemaVersion" : "1.0",
+  "name" : "pkg-clustering",
+  "structure" : [ {
+    "@type" : "group",
+    "name" : "state",
+    "nested" : [ {
+      "@type" : "item",
+      "name" : "state/CalculatorState.java"
+    }, {
+      "@type" : "item",
+      "name" : "state/StartState.java"
+    }, {
+      "@type" : "item",
+      "name" : "state/WaitingForMulDivOperandState.java"
+    }, {
+      "@type" : "item",
+      "name" : "state/WaitingForAddSubOperandState.java"
+    }, {
+      "@type" : "item",
+      "name" : "state/CalculateState.java"
+    }, {
+      "@type" : "item",
+      "name" : "state/GettingFirstOperandState.java"
+    }, {
+      "@type" : "item",
+      "name" : "state/GettingAddSubOperandState.java"
+    }, {
+      "@type" : "item",
+      "name" : "state/GettingMulDivOperandState.java"
+    } ]
+  }, {
+    "@type" : "group",
+    "name" : "visitor",
+    "nested" : [ {
+      "@type" : "item",
+      "name" : "visitor/ExpressionVisitor.java"
+    }, {
+      "@type" : "item",
+      "name" : "visitor/EvaluationVisitor.java"
+    } ]
+  }, {
+    "@type" : "group",
+    "name" : "expression",
+    "nested" : [ {
+      "@type" : "item",
+      "name" : "expression/Expression.java"
+    }, {
+      "@type" : "item",
+      "name" : "expression/AddSubExpr.java"
+    }, {
+      "@type" : "item",
+      "name" : "expression/AtomExpr.java"
+    }, {
+      "@type" : "item",
+      "name" : "expression/MultDivExpr.java"
+    } ]
+  }, {
+    "@type" : "group",
+    "name" : "calculator_client",
+    "nested" : [ {
+      "@type" : "item",
+      "name" : "calculator_client/CalculatorObserver.java"
+    }, {
+      "@type" : "item",
+      "name" : "calculator_client/SimpleCalculator.java"
+    }, {
+      "@type" : "item",
+      "name" : "calculator_client/SocketConnection.java"
+    }, {
+      "@type" : "item",
+      "name" : "calculator_client/CalculatorClient.java"
+    } ]
+  }, {
+    "@type" : "group",
+    "name" : "calculator_server",
+    "nested" : [ {
+      "@type" : "item",
+      "name" : "calculator_server/CalculatorServer.java"
+    }, {
+      "@type" : "item",
+      "name" : "calculator_server/ValidationVisitor.java"
+    } ]
+  }, {
+    "@type" : "item",
+    "name" : "MasterControl.java"
+  } ]
+}

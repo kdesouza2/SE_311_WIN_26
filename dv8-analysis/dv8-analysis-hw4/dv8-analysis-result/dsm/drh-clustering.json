@@ -1,0 +1,192 @@
+{
+  "@schemaVersion" : "1.0",
+  "name" : "drh-clustering",
+  "structure" : [ {
+    "@type" : "group",
+    "name" : "L0",
+    "nested" : [ {
+      "@type" : "group",
+      "name" : "L0/M0",
+      "nested" : [ {
+        "@type" : "group",
+        "name" : "L0/M0/L0",
+        "nested" : [ {
+          "@type" : "group",
+          "name" : "L0/M0/L0/M0",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "expression/Expression.java"
+          } ]
+        } ]
+      }, {
+        "@type" : "group",
+        "name" : "L0/M0/L1",
+        "nested" : [ {
+          "@type" : "group",
+          "name" : "L0/M0/L1/M0",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "expression/MultDivExpr.java"
+          } ]
+        }, {
+          "@type" : "group",
+          "name" : "L0/M0/L1/M1",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "expression/AtomExpr.java"
+          } ]
+        }, {
+          "@type" : "group",
+          "name" : "L0/M0/L1/M2",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "expression/AddSubExpr.java"
+          } ]
+        } ]
+      }, {
+        "@type" : "group",
+        "name" : "L0/M0/Control",
+        "nested" : [ {
+          "@type" : "item",
+          "name" : "visitor/ExpressionVisitor.java"
+        } ]
+      } ]
+    } ]
+  }, {
+    "@type" : "group",
+    "name" : "L1",
+    "nested" : [ {
+      "@type" : "group",
+      "name" : "L1/M0",
+      "nested" : [ {
+        "@type" : "group",
+        "name" : "L1/M0/L0",
+        "nested" : [ {
+          "@type" : "group",
+          "name" : "L1/M0/L0/M0",
+          "nested" : [ {
+            "@type" : "group",
+            "name" : "L1/M0/L0/M0/L0",
+            "nested" : [ {
+              "@type" : "group",
+              "name" : "L1/M0/L0/M0/L0/M0",
+              "nested" : [ {
+                "@type" : "item",
+                "name" : "visitor/EvaluationVisitor.java"
+              } ]
+            }, {
+              "@type" : "group",
+              "name" : "L1/M0/L0/M0/L0/M1",
+              "nested" : [ {
+                "@type" : "item",
+                "name" : "state/StartState.java"
+              }, {
+                "@type" : "item",
+                "name" : "state/CalculatorState.java"
+              } ]
+            }, {
+              "@type" : "group",
+              "name" : "L1/M0/L0/M0/L0/M2",
+              "nested" : [ {
+                "@type" : "item",
+                "name" : "calculator_client/CalculatorObserver.java"
+              } ]
+            } ]
+          }, {
+            "@type" : "group",
+            "name" : "L1/M0/L0/M0/Control",
+            "nested" : [ {
+              "@type" : "item",
+              "name" : "calculator_client/SimpleCalculator.java"
+            } ]
+          } ]
+        } ]
+      }, {
+        "@type" : "group",
+        "name" : "L1/M0/L1",
+        "nested" : [ {
+          "@type" : "group",
+          "name" : "L1/M0/L1/M0",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "state/WaitingForMulDivOperandState.java"
+          }, {
+            "@type" : "item",
+            "name" : "state/WaitingForAddSubOperandState.java"
+          } ]
+        }, {
+          "@type" : "group",
+          "name" : "L1/M0/L1/M1",
+          "nested" : [ {
+            "@type" : "group",
+            "name" : "L1/M0/L1/M1/L0",
+            "nested" : [ {
+              "@type" : "group",
+              "name" : "L1/M0/L1/M1/L0/M0",
+              "nested" : [ {
+                "@type" : "item",
+                "name" : "calculator_server/CalculatorServer.java"
+              }, {
+                "@type" : "item",
+                "name" : "calculator_client/SocketConnection.java"
+              } ]
+            }, {
+              "@type" : "group",
+              "name" : "L1/M0/L1/M1/L0/M1",
+              "nested" : [ {
+                "@type" : "item",
+                "name" : "calculator_client/CalculatorClient.java"
+              } ]
+            } ]
+          }, {
+            "@type" : "group",
+            "name" : "L1/M0/L1/M1/Control",
+            "nested" : [ {
+              "@type" : "item",
+              "name" : "MasterControl.java"
+            } ]
+          } ]
+        } ]
+      }, {
+        "@type" : "group",
+        "name" : "L1/M0/Control",
+        "nested" : [ {
+          "@type" : "group",
+          "name" : "L1/M0/Control/M2",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "state/GettingFirstOperandState.java"
+          } ]
+        }, {
+          "@type" : "group",
+          "name" : "L1/M0/Control/M3",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "state/CalculateState.java"
+          } ]
+        }, {
+          "@type" : "group",
+          "name" : "L1/M0/Control/M4",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "state/GettingAddSubOperandState.java"
+          } ]
+        }, {
+          "@type" : "group",
+          "name" : "L1/M0/Control/M5",
+          "nested" : [ {
+            "@type" : "item",
+            "name" : "state/GettingMulDivOperandState.java"
+          } ]
+        } ]
+      } ]
+    }, {
+      "@type" : "group",
+      "name" : "L1/M1",
+      "nested" : [ {
+        "@type" : "item",
+        "name" : "calculator_server/ValidationVisitor.java"
+      } ]
+    } ]
+  } ]
+}
